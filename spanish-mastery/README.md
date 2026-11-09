@@ -74,4 +74,17 @@ Outside reports and partner feedback are labeled by source. They can inform prac
 - “I think that correction changes what I meant.”
 - “Give me a short activity for my language exchange partner.”
 
-Your initial diagnostic is still pending. Creating this guide has not changed your assessment status.
+Your initial diagnostic and first practice session are complete. See progress.md for current findings and next steps.
+
+## Using your outside Spanish programs
+
+Keep iTalki notes and community materials in the existing Spanish Programs folder beside spanish-mastery. You can add slides, PDFs, feedback, and earned badges without entering them into a special app. Tell the tutor when you add something so it can inspect it during the conversation; files are not monitored in the background.
+
+For example:
+- “I added new iTalki notes. Help me practice the corrections.”
+- “Help me prepare the Mi casa challenge to reach Huevo. I have 20 minutes.”
+- “I have a challenge meeting on Friday. Use the checklist to help me prepare.”
+- “I earned a badge and added it to Badges. Here is the feedback I received…”
+- “Help me choose a bonus side quest and prepare for it.”
+
+The tutor reads the relevant requirements and teaching material, offers manageable practice here in chat, and records your results. Badge achievement is tracked separately from practice accuracy, long-term retention, and spontaneous speaking. Official badges are awarded by your community; rehearsing here does not award them. An absent badge file means completion is not recorded here, rather than a failed challenge.

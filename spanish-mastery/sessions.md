@@ -1,5 +1,8 @@
 # Session history
 
+## External program integration — 2026-11-09
+Learner introduced Spanish Programs containing iTalki and The Spanish Challenge Community x Blacklingual. Inspected level/bonus checklist images and inventoried source and badge filenames; no new language assessment or practice result. EXT-20261109-001 records provenance and limits. Updated instructions, profile, progress map and user guide. Community preparation is a learner-requested priority; next challenge/current rank and new session duration remain unconfirmed. Recommended candidate tasks are Huevo Mi casa or Descripciones because neither has a matching award artifact; this is not evidence of inability or failure. Read relevant PDF before rehearsal. Prior aspect-learning request remains active. No community messages sent or badges awarded.
+
 ## S001 — 2026-10-29 — Initial baseline
 
 Status: open; first writing response saved. Learner reports 30 minutes available; elapsed/remaining time is not measured.
@@ -162,3 +165,6 @@ B020 S001-R023: “No estaban en la mesa de cocina.” Location and reference cr
 
 ### Future-practice request
 S001-R024: learner says estaban/estuvieron distinction remains murky and requests future practice. Save as a learning priority, not a mastered concept or failed assessment. Explanation alone has not produced reported clarity. Future approach: concrete scenes and meaning recognition before production, then new-context interpretation to test intervention; permit context-dependent alternatives. No further aspect drill now. Session has not explicitly been closed.
+
+### System and learning review requested
+Learner requests a shareable summary for refining system with ChatGPT. Current evidence supports a provisional written baseline, not a CEFR level or speaking assessment. Immediate successes: fui/fue 2/2; noun/article choices 3/3 with varying confidence and creative target pairs 2/2; recurring Sundays expression; antes retrieval; past location without unnecessary object pronoun. Retention, automaticity and avoidance remain unestablished. Four documented intervention cycles include one method change (weekday production to meaning recognition). Future priority: concrete aspect-meaning contrasts, later unprimed checks, simpler prompt vocabulary, and one main objective per session. Review dates remain approximate, without calendar scheduling. No external messages sent; summary provided in chat.

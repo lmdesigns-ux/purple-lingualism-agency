@@ -13,3 +13,9 @@ Source: learner-provided project brief and refinements, 2026-10-29.
 - Preferred Spanish region, session duration, and personal speaking situations: not yet established. Do not delay initial writing to collect all preferences.
 
 Initial spontaneous writing sample recorded in S001 (S001-R001). No level or mastery conclusion yet. Learner reported 30 minutes available for S001; this is not a standing session-length preference.
+
+## External programs — added 2026-11-09
+- Participates in iTalki and The Spanish Challenge Community x Blacklingual; stores materials in ../Spanish Programs/.
+- Especially wants practice based on The Spanish Challenge Community materials.
+- Community ranks increase: nuevo miembro, nido, huevo, polluelo, pajarito, cuervo. Requirements inside a named level folder are challenges to reach that level. Challenges are passed at challenge meetings; earned badges go in Badges. Side quests offer separate bonus badges.
+- Current intended next challenge and next meeting date: not yet confirmed. Uploaded artifacts are summarized in progress.md; do not treat them as our direct speaking assessments.
