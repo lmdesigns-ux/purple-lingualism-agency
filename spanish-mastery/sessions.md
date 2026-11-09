@@ -1,5 +1,142 @@
 # Session history
 
+## S002 — 2026-11-09 — Mi Casa preparation
+Status: open; learner selects Mi Casa to work toward Huevo (S002-R000). Learner reports one hour from 10:50 a.m., planned end 11:50 a.m. local; do not assume independently measured time. Next challenge meeting unknown. MC001 housing sample saved as S002-R001.
+
+Checklist: building type, rooms, ten everyday objects, location, local climate. Use small tasks, then an integrated rehearsal; no official award from written practice. Re-inspected clean checklist and read Housing in Spanish.pdf text via local PDFKit extraction before opening task. Source provides a room-by-room furniture tour, regional vocabulary alternatives, household verbs/utilities, and a suggestion to label relevant objects at home. It contains apparent typos/word-category issues (e.g. cochón for colchón; alquiler listed under verbs rather than alquilar); do not reproduce those as correct instruction. Introduce relevant vocabulary only after baseline, preserve regional alternatives, and do not require every PDF word for the badge.
+
+### Completed MC001 — short housing baseline
+How much time do you have today? Describe your home in 3–4 Spanish sentences: say what kind of home it is and name two rooms. You may invent a home if preferred. Use what you know without looking up words; mention any help used. No model sentences before response. Remaining badge criteria will be covered later.
+
+Pending task is unscored. Separate grammatical accuracy, vocabulary, coverage and assistance. Do not infer speech readiness or avoidance from absent features in this limited opening prompt.
+
+MC001 completed: appropriate building type, floor, several rooms, four furnishing types, present verbs and sampled article/noun combinations. Incidental accents/list punctuation not current focus. Cuartos meaning ambiguous; no correction without clarification. Location/climate and ten everyday objects not fully assessed. No outside assistance reported; not assumed verified absent.
+
+### Completed MC002 — intended room meaning
+Cuando dices «tres cuartos», ¿te refieres a tres dormitorios — habitaciones para dormir — o a tres habitaciones en total?
+
+Meaning clarification, not a forced vocabulary correction: cuarto can legitimately mean bedroom or room depending on context/region. No score while pending.
+
+MC002 S002-R002 confirms three bedrooms. Original cuartos accepted; dormitorios is a clarity option, not required replacement. Incidental me refiero form issue noted without diverting from housing objective.
+
+### Completed MC003 — everyday kitchen objects
+Nombra tres cosas de tu cocina que usas todos los días y explica qué haces con cada una. Puedes escribir una frase por objeto. Si no recuerdas una palabra, descríbela sin buscarla.
+
+Meaning-based object/use elicitation without vocabulary or sentence models. Uses provide context for learning but are tutor scaffolding, not an added official badge requirement. Goal is gradual coverage of ten everyday objects across home; no need to complete all ten at once. Pending is not failure.
+
+MC003 S002-R003 lists ten objects throughout home rather than three kitchen items with uses. Accept expanded scope as relevant checklist evidence. Eight well-formed Spanish labels, nivera intended as refrigerator, and English toilet. Ten meaning concepts covered; ten accurate Spanish labels not yet established. Tutor models “A diario uso…” as everyday-use opener and supplies spelling nevera; no need to interrogate every incidental issue now.
+
+### Completed MC004 — vocabulary knowledge clarification
+For “toilet,” do you know a Spanish word but couldn't recall it, or haven't you learned one yet? If you remember a word now, write it; unsure is fine.
+
+Assess lexical knowledge versus retrieval without supplying answer first. No regional term required. Pending is not failure.
+
+MC004 S002-R004: learner reports word not learned. Tutor teaches el inodoro, used in housing PDF; distinguishes fixture from el baño, the room. Source-labeled new vocabulary, not diagnosed retrieval problem. Later integrated rehearsal should check recall without displaying word again beforehand.
+
+### Completed MC005 — location and climate baseline
+¿Dónde está tu casa y cómo es el clima donde vives? Escribe 2–3 frases. Una ciudad o región es suficiente; también puedes inventar el lugar.
+
+No model or weather vocabulary supplied. General location and usual climate requested, not precise address or live weather lookup. Pending is not failure.
+
+MC005 S002-R005 communicates general northeastern US location and local climate. All five badge areas now sampled for intended meaning; not all accurate or rehearsed together. Tutor offers noreste, grados Fahrenheit and veranos bellos as concise vocabulary/agreement feedback. Lloviendo intended timescale to clarify before weather-form explanation. No external weather verification required for learner-provided description.
+
+### Completed MC006 — usual climate or rain now
+When you wrote “lloviendo mucho del año,” did you mean it rains often during the year, or that it is raining right now?
+
+Meaning clarification without supplying correct Spanish weather form. Pending is not failure.
+
+MC006 S002-R006 confirms habitual yearly rain. Tutor explains “Llueve a menudo durante el año” versus “Está lloviendo” and models local revision “Hace frío y llueve a menudo durante el año.” S002-I001 is exploratory trial; cause not confirmed.
+
+### Completed MC007 — immediate weather meaning contrast
+Imagine a town where it usually rains a lot, but it isn't raining right now. Describe both facts in two Spanish sentences.
+
+No Spanish verb supplied in prompt; follows explicit contrast models. Immediate transfer only; allow valid alternatives. Pending is not failure.
+
+MC007 S002-R007 correctly contrasts llueve mucho with no está lloviendo ahora, 2/2 meanings. Accept one compound sentence despite two-sentence instruction. Tutor adds En Seattle for standard place expression. S002-I001-U1 pauses repetition and seeks later integrated/unprimed use. No weather claim verified or required for imagined scenario.
+
+### Completed MC008 — short bathroom tour
+Describe tu baño en 2–3 frases. Menciona por lo menos dos cosas que hay allí y dónde están.
+
+No object names or location constructions supplied. Contextual opportunity to retrieve recently taught vocabulary, not mandatory inodoro production; if absent, do not infer avoidance. Same-session transfer, not long-delay retention. Pending is not failure.
+
+MC008 S002-R008: baño es muy pequeño appropriate; ducha, inodoro, lavamanos, espejo with appropriate articles. Inodoro recalled after intervening task without displayed answer, same session only. Tub missing; teach la bañera and natural una bañera con ducha. Adjective paredes blancos mismatches; investigate reasoning alongside earlier veranos bellas. Relative locations not supplied; no avoidance inference.
+
+### Completed MC009 — adjective selection reasoning
+In “las paredes son blancos,” how did you choose blancos? Were you thinking about the word paredes, or did blancos simply come to mind? It's fine to say unsure.
+
+No corrected adjective or gender answer supplied before response. Investigate knowledge versus selection before practice. Pending is not failure.
+
+MC009 S002-R009: blancos simply came to mind. Record as self-report; adjective/noun knowledge still untested. Use one recognition question rather than assuming root cause and prescribing drills.
+
+### MC010 — superseded recognition prompt
+Looking at “las paredes,” which sounds right to you: “Las paredes son blancos” or “Las paredes son blancas”? Mark sure, unsure, or guessing.
+
+Both options supplied, correct answer not identified before response. Supported recognition/confidence, not spontaneous production, retention or mastery. Pending is not failure.
+
+Learner instead reports forgetting to match endings (S002-R010); no option chosen or confidence given, so recognition is unassessed, not failed. Tutor now supplies correct las paredes blancas in instruction; do not later score this prompt as an independent recognition test.
+
+### Intervention S002-I002 and pending MC011
+Teach connected pairs el baño pequeño / las paredes blancas, with plain-language noun/adjective explanation. Focus check on the thing being described and its describing word, not every ending in sentence; not all adjectives change for gender. Cause remains provisional.
+
+Task: Imagine a home with white doors and white sofas. Describe these in two Spanish sentences. Before sending, check each describing word against the thing it describes.
+
+No target Spanish nouns or complete answers supplied in prompt. Immediate supported production with deliberate check, not spontaneous automaticity/retention evidence. Pending is not failure. Evaluate results before selecting more practice.
+
+S002-R011 (“las parades son blancas; sure”) appears to answer earlier MC010 after instruction. Appropriate blancas, self-reported confidence sure; correct paredes spelling supplied afterward. Not independent recognition because answer already modeled. MC011 remains pending. Clarify walls versus doors and repeat new scene briefly; supply puertas/sofás vocabulary without articles or describing-word endings. Updated assistance level must be recorded when evaluating MC011.
+
+MC011 completed S002-R012: puertas blancas and sofás blancos correct (2/2), also casa bonita. S002-I002-U1 records immediate supported success and decision to pause focused repetition, fade check reminder and seek later unprimed evidence. Creative expression accepted without unnecessary rewriting.
+
+### Completed MC012 — bathroom spatial description
+En tu baño, ¿dónde está el espejo en relación con el lavamanos? Escribe una frase. Puedes describir tu baño real o inventarlo.
+
+Object names previously used by learner, no spatial phrase or verb answer modeled in this prompt. Natural home-tour extension, not an additional official badge requirement. Pending is not failure.
+
+MC012 S002-R013: “El espejo esta arriba del lavamanos.” Location meaning and arriba del appropriate; written accent correction está. Note question itself included está, so verb was cued even though no answer sentence supplied. Next check remaining session time before integrated rehearsal; no language task pending.
+
+Learner reports 28 minutes remaining (S002-R014). Proceed to integrated rehearsal with time for feedback and a short new-context test.
+
+### Completed MC013 — integrated Mi Casa rehearsal
+Imagine speaking at the challenge meeting. Describe your home in Spanish in 8–12 sentences, or a short paragraph plus an object list. Cover: home/building type; rooms; ten things used every day; general location; usual local climate. Real or invented home acceptable. Try without looking back at examples or using lookup; report any assistance. No model, word bank or target forms supplied.
+
+Same-session post-instruction integrated performance, not unprimed baseline or delayed retention. Chat cannot directly assess spoken fluency or automaticity. Accept different valid phrasing; count object concepts separately from accurate Spanish retrieval. Score coverage separately from language accuracy, assistance and self-correction. Select at most 1–2 main feedback priorities, with new-context assessment afterward as time permits. Do not award official badge.
+
+MC013 S002-R015: four checklist areas covered explicitly; missing general geographic location. Ten distinct object concepts, one nonstandard noun form microonda; several article mismatches. Successful same-session retrieval of inodoro/nevera/bañera and appropriate llueve, veranos bellos. S002-I003 focuses three noun/article partnerships rather than exhaustive correction. Bedroom count variation not marked as error; actual intended layout can be confirmed later if needed.
+
+### Completed MC014 — selective assisted revision and location
+Following explicit feedback la alfombra, la bañera, el clima, rewrite only the three phrases in own description using those partnerships, then add one sentence giving general location. No full-script rewrite. This is assisted revision, not independent retrieval or retention; follow with new-context assessment if time permits. Other cleanup remains queued.
+
+MC014 S002-R016: la alfombra and la bañera appropriate; la clima persists, geographic location not supplied. Partial assisted success (2/3 pairings), not independent assessment. S002-I003-U1 changes approach to choice reasoning rather than repeated revision. Tutor models El clima es frío, noting clima takes el despite -a ending. Do not assume heuristic caused choice until learner explains.
+
+### Completed MC015 — clima article reasoning
+When you wrote la clima, were you using the -a ending as a clue, or did la simply come to mind? Another reason or unsure are valid answers.
+
+Correct pairing already supplied before question; reasoning/self-report only, not recognition score. Pending is not failure.
+
+MC015 S002-R017 confirms -a cue interference for clima. S002-I003-U2 records revised meaningful-unit strategy: el clima / un clima frío; endings are useful clues, not decisive rules. Optional aloud rehearsal not treated as observed speech or completed activity. No broad exception list or generalized diagnosis.
+
+### Completed MC016 — location and climate unit
+Write one Spanish sentence saying the general region where you live and describing its usual climate. Use the word clima. A model noun phrase un clima frío was just supplied, so this is supported immediate use, not independent test. Location statement can reuse learner's known northeast US meaning; no address needed.
+
+Await result and then fade cue for later retrieval; do not repeatedly display correct answer while claiming unprimed accuracy. Pending is not failure.
+
+MC016 S002-R018: un clima appropriate, general location included. S002-I003-U3 records supported criterion met and pauses focused correction; later uncued recall needed. All five official areas now supplied across tasks, not all in one accurate independent rehearsal. Tutor corrects written frío and Estados Unidos without additional grammar load. Check current remaining time before final vocabulary cleanup/rehearsal; no language task pending.
+
+Learner reports ten minutes remaining (S002-R019). Plan short vocabulary cleanup, compact final check, then save wrap-up. No new major concept.
+
+### Completed MC017 — compact final vocabulary check
+After feedback una mesa de centro, el microondas (even one appliance), el lavaplatos (dishwasher in supplied housing PDF; regional meanings may vary), and esas diez cosas, write 3–4 sentences describing living room and kitchen, using previously mentioned furnishings and the two appliances. No need to repeat complete tour or ten-item list.
+
+Immediate post-feedback production, not independent retention. Mark article and word forms separately, allow other legitimate regional labels, and do not treat live speaking or speed as assessed. After result provide selective feedback and save session summary, review dates from actual 2026-11-09 practice evidence, unresolved questions and next activity.
+
+MC017 S002-R020: targeted un lavaplatos, un microondas, una mesa de centro all appropriate; un nevera needs una nevera despite correct earlier pairing. Two sentences accepted for meaning coverage. No further drill assigned at session wrap-up.
+
+### S002 wrap-up — 2026-11-09
+Post-session reflection S002-R021: learner proposes slower, more deliberate sentence construction. Future trial: meaning-first sentence, brief focused pairing check, then send. For assessment, retain first attempt and revision to see what self-review actually changes; no claim that speed is measured or root cause confirmed. Goal is temporary support toward reliable use, not permanent monitoring of every word.
+
+Session practice closed with feedback on MC017. S002-A001 records summary. All five Mi Casa areas covered across activities; first full rehearsal omitted geographic location, added later. Ten object concepts listed; inodoro and bañera newly learned, inodoro recalled later within session. Weather usual/current contrast and adjective pair transfer successful immediately; article consistency still uneven (including nevera and clima). Learner-linked -a overgeneralization supported specifically for clima; no broad fixed diagnosis. No official badge, durable mastery, speaking fluency or automaticity finding.
+
+Next activity: short home tour before showing examples, including geographic location and ten objects, then selective article feedback. Suggested reviews: 2026-11-16 and 2026-12-09 relative to dated S002 practice; check when learner returns, no background reminder. Earlier estaban/estuvieron conceptual uncertainty remains queued. Meeting date and outside assistance still unknown; bedroom count differs between samples and may be clarified if real-home factual consistency matters. No unanswered exercise to score as failure.
+
 ## External program integration — 2026-11-09
 Learner introduced Spanish Programs containing iTalki and The Spanish Challenge Community x Blacklingual. Inspected level/bonus checklist images and inventoried source and badge filenames; no new language assessment or practice result. EXT-20261109-001 records provenance and limits. Updated instructions, profile, progress map and user guide. Community preparation is a learner-requested priority; next challenge/current rank and new session duration remain unconfirmed. Recommended candidate tasks are Huevo Mi casa or Descripciones because neither has a matching award artifact; this is not evidence of inability or failure. Read relevant PDF before rehearsal. Prior aspect-learning request remains active. No community messages sent or badges awarded.
 

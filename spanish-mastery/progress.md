@@ -3,9 +3,11 @@
 Updated: 2026-11-09 (America/New_York).
 
 ## Current priority
-Initial writing-first baseline and several immediate learning checks complete. Prepare future sessions around one main objective, especially learner-requested estaban/estuvieron meaning contrasts. Findings are provisional and based on one written session. No exercise currently pending; session not explicitly closed. Learner initially reported 30 minutes and later 15 remaining; current remaining time unknown.
+S002 Mi Casa practice completed 2026-11-09; no exercise pending. Learner is working toward Huevo. All five official areas addressed across tasks, but no single fully accurate independent integrated rehearsal or observed speaking assessment. No badge awarded here.
 
-New priority: integrate Spanish Challenge preparation from ../Spanish Programs/, as requested 2026-11-09. Previous session time allowance does not apply to a new session. Confirm next challenge and today's available time when practice begins; do not resume old time budget. Existing aspect-learning priority remains available and can be incorporated when relevant.
+Next session: ask available time, then collect a short home tour before displaying examples. Include home type, rooms, ten daily-use objects, general location and usual climate. Prioritize noun/article consistency and new-vocabulary recall with minimal interruption. Review targets: 2026-11-16 and 2026-12-09, relative to dated S002 practice, not assumed S001 response dates. Reviews happen when learner returns; no reminders running.
+
+S002 evidence: successful same-session inodoro recall; correct immediate habitual/current rain distinction; puertas blancas / sofás blancos correct with deliberate check; supported un clima correct after -a heuristic clarification. Final targeted microondas, lavaplatos and mesa de centro correct; una nevera still inconsistent. Longer retention and automaticity unassessed. Prior estaban/estuvieron uncertainty remains a later learning priority.
 
 ## Concept status
 Initial observations (S001-O001 and S001-O002) put article/noun agreement, temporal expressions, habitual event descriptions, and vocabulary precision under investigation. Samples include appropriate completed-event forms, purpose expression, and contextually appropriate esta/esa choices with cosa. Independent noun-free reference is not yet established. No confirmed cause or avoidance; written performance does not establish automaticity or retention.
@@ -17,20 +19,24 @@ Initial observations (S001-O001 and S001-O002) put article/noun agreement, tempo
 - Review target: unprimed transfer at a later opportunity, with delayed checks about one week and one month after B007 success. Exact calendar dates pending reliable response-date confirmation; setup date is not assumed to be practice date.
 
 ## Next steps
-1. Focused fui/fue practice paused following immediate success. Revisit later in a new narrative without naming target forms; keep retention and automaticity separate.
-2. B020 complete (S001-R023): No estaban en la mesa de cocina appropriately expresses location without object clitic. S001-I004-U1 records immediate criterion met; pause repetition. Learner asks estaban versus estuvieron; explain scene-at-moment versus bounded episode without declaring estuvieron invalid for past location. Aspect understanding remains under investigation, not diagnosed from question alone. No pending exercise; remaining time unknown. Earlier successes require delayed checks.
-3. Other patterns remain candidates; clarify intended timing/word choices if needed. Outside assistance and conscious avoidance remain unknown. Do not treat circumlocution under the no-repetition instruction as established avoidance.
+Learner reflection after S002 (S002-R021): wants to slow down rather than use first retrieved form. Test a brief two-pass strategy: express intended meaning, then check one noun/article/describing-word group. Preserve original and revised wording in a designated comparison task; ordinary unreviewed writing remains useful evidence. Do not assume speed explains all errors or demand exhaustive checking. Track deliberate success separately from spontaneous use and fade support as appropriate.
+
+1. Begin new session with an uncued housing sample, without showing corrected script or word pairings first. Track assistance honestly; apply fair regional alternatives.
+2. Check noun/article consistency (especially nevera, clima, alfombra, bañera), adjective agreement, and recall of inodoro, bañera, microondas. Do not assume every mismatch shares one cause.
+3. If learner wants a spoken rehearsal, distinguish supplied recording/partner report/self-report from directly observed writing. Official badge outcome must come from community evidence.
+4. Revisit earlier fui/fue, weekday reference and antes in unfamiliar contexts as useful; no claim of delayed retention yet.
+5. Use concrete scenes for estaban/estuvieron when that becomes selected objective; earlier explanation did not establish clarity.
 
 ## Outstanding questions
-- Future learning priority requested by learner (S001-R024): estaban/estuvieron and, cautiously, past-event perspective more generally. Distinction remains subjectively murky after explanation. Do not equate correct B020 with conceptual understanding of aspect. Begin later with one concrete scene and meaning contrasts, then test interpretation in a new scene; accept multiple valid perspectives. No new exercise pending and no mastery claim.
-- Any outside assistance used for B001?
-- Specific Thursday confirmed (S001-R010); precise action that day remains unspecified. What meaning did “muestra” intend?
-- What patterns emerge in independent production versus structured elicitation?
-- Where does the learner knowingly paraphrase to avoid uncertainty, if anywhere?
-- Which regional preferences or communication settings matter most? Ask when relevant.
+- Next challenge meeting date and any community feedback?
+- Any outside assistance used during samples? Absence of report is not verified absence.
+- Real or invented layout: first sample three bedrooms, integrated tour two; clarify only if relevant, not a grammatical error.
+- Wider article/adjective difficulty: word-specific knowledge versus retrieval versus heuristic effects needs more evidence. -a heuristic supported specifically for clima.
+- Avoidance not established; missing forms in free production are not inability evidence.
+- Earlier intended meaning of muestra and regional preferences remain unresolved.
 
 ## Context recovery
-Read AGENTS.md and learner-profile.md, this file, then S001 in sessions.md and any relevant evidence.jsonl entries. A pending task has no score and is not a failure.
+Read AGENTS.md and learner-profile.md, this file, then S002 wrap-up in sessions.md and relevant evidence.jsonl entries (especially S002-A001). A pending task has no score and is not a failure.
 
 ## External program map — inventoried 2026-11-09
 Source root: ../Spanish Programs/. Program rules supplied by learner; achievement dates and current rank not independently verified. Rank order: nuevo miembro → nido → huevo → polluelo → pajarito → cuervo. Requirements in Huevo are for reaching Huevo. Only Nido/Huevo level materials currently present; later rank requirements unknown.
@@ -46,11 +52,11 @@ Checklist images inspected directly: Nido/Nido_Checklist_Progress.png; Huevo/Hue
 | Huevo | Tengo hambre — food-ordering skit | 2._Huevo_Order_food_badge.png | Not assessed against full rubric |
 | Huevo | Reto — order food in real life and report experience in community celebrations channel | 2._Huevo_Order_food_challenge_badge.png | Outside award artifact; speech not observed here |
 | Huevo | Descripciones — describe random photo: colors, tastes, shapes, amounts, sizes, opinions, there is/are | No matching earned badge found | Candidate preparation priority; completion unknown |
-| Huevo | Mi casa — building type, rooms, ten everyday objects, location and local climate | No matching earned badge found | Candidate preparation priority; completion unknown |
+| Huevo | Mi casa — building type, rooms, ten everyday objects, location and local climate | No matching earned badge found | Selected target; S002 written preparation complete, official outcome unknown |
 
-Badge paths above are under The Spanish Challenge Community x Blacklingual/Badges/. This is an artifact inventory interpreted using learner's statement that these are earned badges; no award dates or assessment scores inferred. No Huevo level-completion badge found; current rank/next target needs confirmation.
+Badge paths above are under The Spanish Challenge Community x Blacklingual/Badges/. This is an artifact inventory interpreted using learner's statement that these are earned badges; no award dates or assessment scores inferred. No Huevo level-completion badge found; learner confirms working toward Huevo, with Mi Casa selected.
 
-Available preparation sources (inventoried, full document contents not yet reviewed):
+Available preparation sources (Housing PDF text reviewed for S002; other documents only inventoried):
 - Nido PPTX: introductions, describing yourself, daily routines/reflexive verbs, and the Spanish “-ing” ending.
 - Huevo PDF: Housing in Spanish; Ordering Food in Spanish; Clothing Vocabulary; Blacklingual Discor_  Describe Things in Spanish.
 - pictures/: images and MOV files present; contents/purpose not reviewed. Use only when relevant to chosen activity.
