@@ -7,6 +7,22 @@ import { freshState, STORAGE_KEY, saveState } from './lib';
 
 beforeEach(()=>{localStorage.clear();vi.restoreAllMocks();vi.spyOn(window,'confirm').mockReturnValue(true);});
 describe('practice interface',()=>{
+  it('starts categories collapsed, summarizes selections, and keeps filters after closing and refresh',async()=>{
+    const user=userEvent.setup();const {unmount}=render(<App/>);
+    expect(screen.getByRole('button',{name:'Choose categories'})).toHaveAttribute('aria-expanded','false');
+    expect(screen.queryByRole('button',{name:'Rooms',exact:true})).not.toBeInTheDocument();
+    await user.click(screen.getByRole('button',{name:'Choose categories'}));
+    await user.click(screen.getByRole('button',{name:'Clear selection'}));
+    await user.click(screen.getByRole('button',{name:'Rooms',exact:true}));
+    const count=base.filter(e=>e.category==='Rooms').length;
+    expect(screen.getByText(`Rooms · ${count} words`)).toBeInTheDocument();
+    await user.click(screen.getByRole('button',{name:'Done'}));
+    expect(screen.queryByRole('button',{name:'Rooms',exact:true})).not.toBeInTheDocument();
+    expect(screen.getByRole('button',{name:'Flip card: la cocina'})).toBeInTheDocument();
+    unmount();render(<App/>);
+    expect(screen.getByRole('button',{name:'Choose categories'})).toHaveAttribute('aria-expanded','false');
+    expect(screen.getByText(`Rooms · ${count} words`)).toBeInTheDocument();
+  });
   it('flips via compassboard, removes Got it cards without skipping the next card, and persists until reset',async()=>{
     const user=userEvent.setup();const {unmount}=render(<App/>);
     const card=screen.getByRole('button',{name:'Flip card: la cocina'});card.focus();await user.keyboard('{Enter}');expect(screen.getByRole('button',{name:'Flip card: the kitchen'})).toBeInTheDocument();
@@ -27,6 +43,7 @@ describe('practice interface',()=>{
   it('keeps Still learning in the deck and hides existing Got it ratings through filter changes',async()=>{
     const state=freshState();state.ratings[base[0].id]={status:'got',updatedAt:'today'};saveState(state);
     const user=userEvent.setup();render(<App/>);await user.click(screen.getByRole('button',{name:'Still learning'}));await user.click(screen.getByRole('button',{name:'← Previous'}));expect(screen.getByRole('button',{name:'Flip card: el baño'})).toBeInTheDocument();
+    await user.click(screen.getByRole('button',{name:'Choose categories'}));
     await user.click(screen.getByRole('button',{name:'Rooms',exact:true}));await user.click(screen.getByRole('button',{name:'Reset this deck'}));
     expect(JSON.parse(localStorage.getItem(STORAGE_KEY)).ratings[base[0].id].status).toBe('got');
     await user.click(screen.getByRole('button',{name:'All cards'}));expect(screen.getByRole('button',{name:'Flip card: el baño'})).toBeInTheDocument();
@@ -40,6 +57,7 @@ describe('practice interface',()=>{
     const user=userEvent.setup();render(<App/>);await user.click(screen.getByRole('button',{name:'Quiz',exact:true}));await user.click(screen.getByRole('button',{name:'Start quiz →'}));
     window.confirm.mockReturnValueOnce(false);await user.click(screen.getByLabelText('Show English first'));expect(screen.getByLabelText('Show English first')).not.toBeChecked();
     await user.click(screen.getByRole('button',{name:'Flash Cards',exact:true}));expect(JSON.parse(localStorage.getItem(STORAGE_KEY)).attempts[0].status).toBe('incomplete');
+    await user.click(screen.getByRole('button',{name:'Choose categories'}));
     for (const category of new Set(base.map(e=>e.category))) await user.click(screen.getByRole('button',{name:category,exact:true}));
     expect(screen.getByText('No cards selected.')).toBeInTheDocument();
   });

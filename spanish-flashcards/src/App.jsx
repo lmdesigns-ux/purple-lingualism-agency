@@ -10,12 +10,15 @@ export default function App() {
   const [data, setData] = useState(() => ({ ...initial.state, attempts: initial.state.attempts.map(a => a.status === 'active' ? { ...a, status: 'incomplete' } : a) }));
   const [storageError, setStorageError] = useState(initial.error);
   const [mode, setMode] = useState('Flash Cards');
+  const [categoriesOpen, setCategoriesOpen] = useState(false);
   const [order, setOrder] = useState([]), [position, setPosition] = useState(0), [flipped, setFlipped] = useState(false);
   const [quizId, setQuizId] = useState(null), [questionIndex, setQuestionIndex] = useState(0), [quizNotice, setQuizNotice] = useState('');
   const entries = useMemo(() => effectiveVocabulary(base, data), [data.overrides, data.deleted]);
   const categories = [...new Set(entries.map(e => e.category))];
   const p = data.preferences;
   const selected = entries.filter(e => p.categories === null || p.categories.includes(e.category));
+  const selectedCategoryCount = categories.filter(c => p.categories === null || p.categories.includes(c)).length;
+  const categorySummary = selectedCategoryCount === categories.length ? 'All categories' : selectedCategoryCount === 1 ? categories.find(c => p.categories?.includes(c)) : `${selectedCategoryCount} of ${categories.length} categories`;
   const signature = selected.map(e => e.id).join('|');
   useEffect(() => { setOrder(selected.map(e => e.id)); setPosition(0); setFlipped(false); }, [signature]);
   useEffect(() => {
@@ -63,7 +66,10 @@ export default function App() {
     {storageError && <aside className="warning" role="alert">{storageError} <button onClick={() => { if (allowChange()) setMode('Manage Vocabulary'); }}>Open backups</button></aside>}
     <nav className="tabs" aria-label="Practice modes">{['Flash Cards','Quiz','Manage Vocabulary'].map(m => <button key={m} className={mode === m ? 'active' : ''} aria-pressed={mode === m} onClick={() => { if (mode === m || allowChange()) setMode(m); }}>{m}</button>)}</nav>
     {mode !== 'Manage Vocabulary' && <>
-      <div className="filters" aria-label="Vocabulary categories"><button className={p.categories === null ? 'selected' : ''} aria-pressed={p.categories === null} onClick={() => preference('categories', null)}><i className="all-swatch"/>All cards</button>{categories.map((c,i) => <button key={c} className={p.categories?.includes(c) ? 'selected' : ''} aria-pressed={p.categories === null || p.categories.includes(c)} onClick={() => toggleCategory(c)}><i style={{ background: palette[i % palette.length] }}/>{c}</button>)}</div>
+      <div className="category-picker">
+        <button className="category-toggle" aria-label="Choose categories" aria-expanded={categoriesOpen} aria-controls="category-options" onClick={() => setCategoriesOpen(open => !open)}><span className="category-title"><i className="all-swatch"/>Categories</span><span className="category-summary">{categorySummary} · {selected.length} words<span aria-hidden="true">{categoriesOpen ? ' −' : ' +'}</span></span></button>
+        {categoriesOpen && <div id="category-options" className="category-options"><p className="hint">Choose one or more categories.</p><div className="filters" aria-label="Vocabulary categories"><button className={p.categories === null ? 'selected' : ''} aria-pressed={p.categories === null} onClick={() => preference('categories', null)}><i className="all-swatch"/>All cards</button>{categories.map((c,i) => <button key={c} className={p.categories === null || p.categories.includes(c) ? 'selected' : ''} aria-pressed={p.categories === null || p.categories.includes(c)} onClick={() => toggleCategory(c)}><i style={{ background: palette[i % palette.length] }}/>{c}</button>)}</div><div className="toolbar"><button onClick={() => preference('categories', [])}>Clear selection</button><button className="black" onClick={() => setCategoriesOpen(false)}>Done</button></div></div>}
+      </div>
       <div className="settings"><label><input type="checkbox" checked={p.englishFirst} onChange={e => preference('englishFirst', e.target.checked)}/>Show English first</label><label><input type="checkbox" checked={p.pronunciation} onChange={e => preference('pronunciation', e.target.checked)}/>Show pronunciation</label></div>
       {p.pronunciation && <p className="hint">Pronunciation is approximate. CAPITAL letters mark the stressed syllable.</p>}
     </>}

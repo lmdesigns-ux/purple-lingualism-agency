@@ -48,6 +48,12 @@ test('create word, export and restore full backup',async({page})=>{
 test('fits a 320px viewport across practice and management', async ({page})=>{
   await page.setViewportSize({width:320,height:740});await page.goto('/');
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+  await expect(page.getByRole('button',{name:'Choose categories'})).toHaveAttribute('aria-expanded','false');
+  await page.getByRole('button',{name:'Choose categories'}).click();
+  await expect(page.getByRole('button',{name:'Rooms',exact:true})).toBeVisible();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+  await page.getByRole('button',{name:'Done',exact:true}).click();
+  await expect(page.getByRole('button',{name:'Rooms',exact:true})).toHaveCount(0);
   await page.getByRole('button',{name:'Manage Vocabulary'}).click();await page.getByRole('button',{name:'+ Add word'}).click();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
 });

@@ -1,12 +1,14 @@
 # Mi vocabulario
 
-A personal Spanish vocabulary app built with React, Vite, and plain CSS. The 102-entry housing collection includes the original 16-word Mi Casa starter deck plus the remaining vocabulary from your Housing in Spanish slides. It runs locally and does not connect to tutoring records or external programs.
+A personal Spanish vocabulary app built with React, Vite, and plain CSS. The 104-entry collection includes the original 16-word Mi Casa starter deck, the remaining vocabulary from your Housing in Spanish slides, and two learner-requested bookshelf/shelf cards. It runs locally and does not connect to tutoring records or external programs.
 
 ## Housing collection
 
 Source: `../Spanish Programs/The Spanish Challenge Community x Blacklingual/Huevo/Housing in Spanish.pdf`, vocabulary on pages 3–35. The collection adds 86 entries covering building features, rooms, furniture, household items, appliances, office/entertainment items, outdoor spaces, utilities, bills, and verbs. New entries include source-page references, articles where appropriate, notes, and approximate pronunciation.
 
 Synonyms are grouped on one card or included in the existing card's notes (for example, nevera/refri/refrigerador and dormitorio/habitación) rather than making equivalent translations compete in a quiz. The source's `cochón` is corrected to **colchón**, and its noun **alquiler** is retained alongside the proper verb **alquilar**. **Lámpara** includes its written accent.
+
+Learner-requested additions in Furniture: **la estantería / el librero** (bookcase/shelving unit) and **el estante** (shelf). Their notes explain regional usage, the bookseller sense of librero, and the library/bookcase senses of biblioteca. Estante can also name a whole shelving unit; it is not restricted to a single shelf. These additions were checked against the RAE/ASALE entries for [estantería](https://dle.rae.es/estanter%C3%ADa), [librero](https://dle.rae.es/librero), [estante](https://dle.rae.es/estante), and [biblioteca](https://dle.rae.es/biblioteca).
 
 The original 16 IDs are preserved. Refresh the app to load the expanded collection; no import or reset is needed. Existing user edits, deletions, and Got it ratings still apply. If you previously selected particular categories, select **All cards** to include the new categories. A user-edited entry overrides bundled notes as well as translations, so its existing edits are kept.
 
@@ -33,6 +35,8 @@ npm run preview
 Stop the development server before running preview, which intentionally uses the same hostname and port. Both commands use the same browser storage origin. The built files are in `dist/`.
 
 ## Practice
+
+Category choices start collapsed to leave more space for practice. Click **Categories** to open the panel; its compact summary shows the current selection and word count. Toggle individual categories, use **All cards** or **Clear selection**, then click **Done** (or Categories again) to collapse it. Selections are saved even when the panel is closed and apply to both flashcards and quizzes.
 
 - **Flash Cards:** select any combination of categories or All cards. Tap the card, or focus it and press Enter/Space, to reveal the other language. Use Previous/Next to revisit remaining words. Still learning saves your self-rating and advances while keeping the card in practice. Got it removes the card from flashcard practice until you reset its deck, including after refresh, shuffle, or category changes. It stays in your vocabulary collection and remains available for quizzes. When all selected cards are Got it, the completion screen still offers Reset this deck.
 - **Direction:** Show English first reverses both cards and quiz questions. Spanish pronunciation appears only when Spanish is visible, preventing English-first quiz answer leakage.
