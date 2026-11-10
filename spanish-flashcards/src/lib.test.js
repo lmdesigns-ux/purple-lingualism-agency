@@ -1,9 +1,48 @@
 import { describe, it, expect } from 'vitest';
 import base from './data/vocabulary.json';
 import { freshState, validateState, validateVocabulary, effectiveVocabulary, upsert, removeEntry, resetRatings, toCSV, parseImport, loadState, saveState, STORAGE_KEY, buildQuiz, answerAttempt, normalize } from './lib';
+import { spanish, translator } from './i18n';
 
 describe('vocabulary and persistence', () => {
-  it('contains 151 valid housing and description entries in sixteen categories', () => { expect(validateVocabulary(base)).toHaveLength(151); expect(new Set(base.map(e=>e.category)).size).toBe(16); });
+  it('contains 550 valid vocabulary entries with unambiguous prompts and translated categories', () => {
+    expect(validateVocabulary(base)).toHaveLength(550);
+    const categories = new Set(base.map(e=>e.category));
+    expect(categories.size).toBe(31);
+    for (const category of categories) {
+      expect(spanish[category]).toBeTruthy();
+      expect(translator('es')(category)).toBe(spanish[category]);
+      expect(translator('en')(category)).toBe(category);
+    }
+    for (const field of ['spanish', 'english']) expect(new Set(base.map(e=>normalize(e[field]))).size).toBe(base.length);
+    for (const entry of base.slice(151)) {
+      expect(entry.pronunciation).toBeTruthy();
+      expect(entry.notes).toMatch(/Source: .+, (slide|p\.) \d+\./);
+      expect(entry.spanish).not.toMatch(/[¿?¡!_@]/);
+    }
+    const phrases = base.map(e=>e.spanish);
+    expect(phrases).toEqual(expect.arrayContaining(['ahorrar', 'el nombre', 'dormirse', 'a rayas', 'hacer la cama']));
+    for (const sentence of ['Me llamo', 'Tengo años', 'Estoy trabajando.', '¿Qué llevas puesto?', 'Todo está delicioso.']) expect(phrases).not.toContain(sentence);
+  });
+  it('adds the actual Nido/Huevo collection to old saved state without changing learning records', () => {
+    const oldBundle = base.slice(0,151);
+    let state = upsert(freshState(), [{...oldBundle[0],spanish:'mi cocina',notes:'My own notes'}]);
+    state = removeEntry(state, oldBundle[1].id);
+    state.ratings[oldBundle[0].id] = {status:'got',updatedAt:'2026-11-01'};
+    state.quizStats[oldBundle[0].id] = {answered:2,correct:1};
+    state.attempts = [{id:'old-quiz',status:'complete',startedAt:'2026-11-01',englishFirst:false,
+      questions:[{itemId:oldBundle[0].id,prompt:'la cocina',correct:'the kitchen',category:'Rooms',pronunciation:'',choices:['the kitchen','the bathroom']}],
+      answers:[{choice:'the kitchen',correct:true}]}];
+    const before = structuredClone(state);
+    const merged = effectiveVocabulary(base, state);
+    expect(merged.find(e=>e.id===oldBundle[0].id)).toMatchObject({spanish:'mi cocina',notes:'My own notes'});
+    expect(merged.some(e=>e.id===oldBundle[1].id)).toBe(false);
+    for (const entry of base.slice(151)) {
+      expect(merged.find(e=>e.id===entry.id)).toBeDefined();
+      expect(state.ratings[entry.id]).toBeUndefined();
+    }
+    expect(state).toEqual(before);
+    expect(validateState(state)).toEqual(before);
+  });
   it('preserves edits, custom entries and deletions through bundled updates', () => {
     let s = upsert(freshState(), [{...base[0],spanish:'mi cocina'}, {...base[1],id:'personal',spanish:'custom'}]);
     s = removeEntry(s, base[2].id);
@@ -27,7 +66,7 @@ describe('vocabulary and persistence', () => {
   it('persists and restores full state, rejecting corrupt backups without overwriting them', () => {
     const s=upsert(freshState(),[base[0]]);s.ratings[base[0].id]={status:'got',updatedAt:'today'};saveState(s);expect(loadState().state).toEqual(s);expect(validateState(JSON.parse(JSON.stringify(s)))).toEqual(s);
     localStorage.setItem(STORAGE_KEY,'broken');const loaded=loadState();expect(loaded.blocked).toBe(true);expect(localStorage.getItem(STORAGE_KEY)).toBe('broken');
-    expect(()=>validateState({...s,version:2})).toThrow();expect(()=>validateState({...s,ratings:{x:{status:'mastered'}}})).toThrow();localStorage.clear();
+    expect(()=>validateState({...s,version:3})).toThrow();expect(()=>validateState({...s,ratings:{x:{status:'mastered'}}})).toThrow();localStorage.clear();
   });
   it('resets only selected ratings, leaving quiz records and other ratings alone', () => {
     const s=freshState();s.ratings={one:{status:'got'},two:{status:'learning'}};s.quizStats={one:{answered:1,correct:1}};

@@ -5,7 +5,7 @@ const vocabulary = JSON.parse(readFileSync(new URL('../src/data/vocabulary.json'
 test('flip, rate, persist, and render without overflow', async ({ page }, info) => {
   const errors=[];page.on('pageerror', e=>errors.push(e.message));
   await page.goto('/');
-  await expect(page.getByRole('heading',{name:'Mi vocabulario.'})).toBeVisible();
+  await expect(page.getByRole('heading',{name:'My vocabulary.'})).toBeVisible();
   const card=page.getByRole('button',{name:'Flip card: la cocina'});
   await card.focus();await page.keyboard.press('Enter');
   await expect(page.getByRole('button',{name:'Flip card: the kitchen'})).toBeVisible();
@@ -56,4 +56,26 @@ test('fits a 320px viewport across practice and management', async ({page})=>{
   await expect(page.getByRole('button',{name:'Rooms',exact:true})).toHaveCount(0);
   await page.getByRole('button',{name:'Manage Vocabulary'}).click();await page.getByRole('button',{name:'+ Add word'}).click();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+});
+
+test('practices new vocabulary and keeps category selection and progress across languages and refresh',async({page})=>{
+  await page.goto('/');
+  await page.getByRole('button',{name:'Choose categories'}).click();
+  await page.getByRole('button',{name:'Clear selection'}).click();
+  await page.getByRole('button',{name:'Daily routines',exact:true}).click();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+  await page.getByRole('button',{name:'Done',exact:true}).click();
+  await expect(page.getByRole('button',{name:'Flip card: levantar'})).toBeVisible();
+  await page.getByRole('button',{name:'Español'}).click();
+  await page.getByRole('button',{name:'Girar tarjeta: levantar'}).click();
+  await expect(page.getByRole('button',{name:'Girar tarjeta: to lift'})).toContainText('Source: Daily Routine + Reflexive Verbs, slide 11.');
+  await page.getByRole('button',{name:'Aprendido',exact:true}).click();
+  await page.reload();
+  await expect(page.getByRole('button',{name:'Girar tarjeta: levantar pesos'})).toBeVisible();
+  await page.getByRole('button',{name:'Elegir categorías'}).click();
+  await expect(page.getByRole('button',{name:'Rutinas diarias',exact:true})).toHaveAttribute('aria-pressed','true');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('spanish-flashcards:v1')));
+  expect(saved.ratings['nido-levantar'].status).toBe('got');
+  expect(saved.preferences.categories).toEqual(['Daily routines']);
 });

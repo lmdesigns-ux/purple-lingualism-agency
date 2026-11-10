@@ -1,6 +1,35 @@
 # Mi vocabulario
 
-A personal Spanish vocabulary app built with React, Vite, and plain CSS. The 151-entry collection includes the original 16-word Mi Casa starter deck, the remaining vocabulary from your Housing in Spanish slides, two learner-requested bookshelf/shelf cards, and 47 vocabulary cards from Describe Things in Spanish. It runs locally and does not connect to tutoring records or external programs.
+A personal Spanish vocabulary app built with React, Vite, and plain CSS. The 550-entry collection covers vocabulary from all eight Nido and Huevo slide decks, including individual words extracted from their Spanish examples, plus the two learner-requested bookshelf/shelf cards. It runs locally and does not connect to tutoring records or external programs.
+
+## Nido and Huevo vocabulary
+
+This expansion adds 399 cards to the previous 151, across 31 categories in total. Each new card includes a translation, approximate pronunciation, and a source slide/page in its notes. Slide/page numbers are one-based; repeated animation/build slides are counted in the original numbering but their vocabulary is included once.
+
+Sources are under `../Spanish Programs/The Spanish Challenge Community x Blacklingual/`:
+
+| Folder and source | Pages/slides reviewed | New cards primarily sourced here |
+| --- | --- | ---: |
+| Nido — Describing Yourself in Spanish | 1–92, including the relationship-status image | 87 |
+| Nido — Introducing yourself in Spanish | 1–10 | 34 |
+| Nido — Daily Routine + Reflexive Verbs | 1–38 | 99 |
+| Nido — The “-ing” ending in Spanish | 1–40 | 17 |
+| Huevo — Clothing Vocabulary | 1–72 | 45 |
+| Huevo — Ordering Food in Spanish | 1–23 | 106 |
+| Huevo — Housing in Spanish | 1–36 | 1 |
+| Huevo — Describe Things in Spanish | 1–8 | 10 |
+
+The housing and Describe Things vocabulary was already present; this pass adds the Spanish heading vocabulary and checks the existing coverage. Words shared across decks are represented once, so the table attributes each new card to its primary source. Related fixed phrases may have their own cards: **la cama**, **hacer**, and **hacer la cama** teach different retrieval units.
+
+New categories: Personality; Identity & relationships; Diet & beliefs; Appearance & body; Feelings & manners; Everyday verbs; Everyday nouns; Connecting words & pronouns; Time & frequency; Daily routines; Clothing; Clothing descriptions; Food & drinks; Dining & utensils; Cooking & taste. Category labels are available in both interface languages.
+
+Only vocabulary goes in this collection. Individual words from Spanish examples are included, with conjugated verbs converted to infinitives and reflexive meanings preserved: **dormir** (sleep) and **dormirse** (fall asleep) stay separate. Nouns carry articles; adjective forms such as **tímid@** become **tímido/a**. Fixed lexical phrases such as **a menudo**, **a rayas**, **hacer la cama**, and **por favor** are included. Full sentences, questions, dialogues, and open sentence frames such as **me llamo ___**, **tengo ___ años**, and **me podría dar ___** are excluded. Single words such as **hola** and **gracias** are retained as vocabulary; longer greeting/farewell utterances are excluded. Sentence/template practice remains separate and is not implemented here.
+
+The audit excludes English-only explanatory prose, off-slide linked resources (including the careers list and videos), incidental proper names/brands, unrelated screenshot navigation, grammatical suffixes, and deliberately incorrect spellings used as warnings. It does not invent careers absent from the slides or make **-ando/-iendo** conjugation cards. The embedded relationship-status image supplies **separado/a**, **viudo/a**, **pareja de hecho**, and **unión civil**, among other relationship words.
+
+Source corrections include **riquísimo/a** (not ricísimo), **quedan** (not quendan), **enseguida** (not en seguido), feminine **la orden** for a food order and **la hamburguesa**, and the accents in **centímetro**, **televisión**, and **súper**. **A la plancha** specifies a griddle; regional terms such as **medias**, **tenis**, **papitas**, and **cuchilla** have contextual notes. **Liso/a** keeps its existing card and gains a note about its plain/unpatterned clothing meaning.
+
+Refresh the app to load the expanded collection. If you previously selected categories, choose **All cards** or select the new categories. Existing IDs, personal edits, deletion markers, ratings, and quiz history are preserved; new cards begin unrated. Personal overrides continue to take precedence over bundled notes and translations. No import or reset is required.
 
 ## Describe Things collection
 

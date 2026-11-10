@@ -7,6 +7,29 @@ import { freshState, STORAGE_KEY, saveState } from './lib';
 
 beforeEach(()=>{localStorage.clear();vi.restoreAllMocks();vi.spyOn(window,'confirm').mockReturnValue(true);});
 describe('practice interface',()=>{
+  it('practices a new category in either interface language and preserves its progress after refresh',async()=>{
+    const user=userEvent.setup();const {unmount}=render(<App/>);
+    await user.click(screen.getByRole('button',{name:'Choose categories'}));
+    await user.click(screen.getByRole('button',{name:'Clear selection'}));
+    await user.click(screen.getByRole('button',{name:'Clothing',exact:true}));
+    await user.click(screen.getByRole('button',{name:'Done',exact:true}));
+    expect(screen.getByRole('button',{name:'Flip card: la ropa'})).toBeInTheDocument();
+    await user.click(screen.getByRole('button',{name:'Español'}));
+    expect(screen.getByRole('button',{name:'Girar tarjeta: la ropa'})).toBeInTheDocument();
+    await user.click(screen.getByRole('button',{name:'Girar tarjeta: la ropa'}));
+    expect(screen.getByText('Source: Clothing Vocabulary, p. 37.',{exact:false})).toBeInTheDocument();
+    await user.click(screen.getByRole('button',{name:'Aprendido',exact:true}));
+    unmount();render(<App/>);
+    expect(screen.getByRole('button',{name:'Girar tarjeta: la camiseta'})).toBeInTheDocument();
+    await user.click(screen.getByRole('button',{name:'Elegir categorías'}));
+    expect(screen.getByRole('button',{name:'Ropa',exact:true})).toHaveAttribute('aria-pressed','true');
+    expect(screen.getByRole('button',{name:'Rutinas diarias',exact:true})).toBeInTheDocument();
+    await user.click(screen.getByRole('button',{name:'English'}));
+    expect(screen.getByRole('button',{name:'Clothing',exact:true})).toHaveAttribute('aria-pressed','true');
+    const saved=JSON.parse(localStorage.getItem(STORAGE_KEY));
+    expect(saved.ratings['huevo-la-ropa'].status).toBe('got');
+    expect(saved.preferences.categories).toEqual(['Clothing']);
+  });
   it('replaces English with slide images, persists the setting, and falls back on image errors',async()=>{
     const user=userEvent.setup();const {unmount}=render(<App/>);
     await user.click(screen.getByLabelText('Show images'));
@@ -79,7 +102,9 @@ describe('practice interface',()=>{
     expect(screen.getByText('No cards selected.')).toBeInTheDocument();
   });
   it('creates, edits and deletes a word without changing its ID',async()=>{
-    const user=userEvent.setup();render(<App/>);await user.click(screen.getByRole('button',{name:'Manage Vocabulary'}));await user.click(screen.getByRole('button',{name:'+ Add word'}));
+    const user=userEvent.setup();render(<App/>);await user.click(screen.getByRole('button',{name:'Manage Vocabulary'}));
+    fireEvent.change(screen.getByRole('searchbox'),{target:{value:'brújula'}});
+    await user.click(screen.getByRole('button',{name:'+ Add word'}));
     await user.type(screen.getByLabelText('Spanish *'),'la brújula');await user.type(screen.getByLabelText('English *'),'the compass');await user.type(screen.getByLabelText('Category *'),'Personal');await user.click(screen.getByRole('button',{name:'Save word'}));
     let saved=JSON.parse(localStorage.getItem(STORAGE_KEY));const id=Object.keys(saved.overrides)[0];expect(id).toMatch(/^user-/);
     await user.click(screen.getByRole('button',{name:'Edit la brújula'}));await user.clear(screen.getByLabelText('English *'));await user.type(screen.getByLabelText('English *'),'a compass');await user.click(screen.getByRole('button',{name:'Save word'}));
@@ -87,6 +112,7 @@ describe('practice interface',()=>{
   });
   it('previews vocabulary import and restores a validated full backup',async()=>{
     const user=userEvent.setup();render(<App/>);await user.click(screen.getByRole('button',{name:'Manage Vocabulary'}));
+    fireEvent.change(screen.getByRole('searchbox'),{target:{value:'patio'}});
     const file={name:'words.json',text:async()=>JSON.stringify([{...base[0],id:'import-word',spanish:'el patio'}])};fireEvent.change(screen.getByLabelText('Import vocabulary file'),{target:{files:[file]}});
     await screen.findByRole('region',{name:'Import preview'});expect(JSON.parse(localStorage.getItem(STORAGE_KEY)).overrides['import-word']).toBeUndefined();await user.click(screen.getByRole('button',{name:'Confirm import'}));expect(JSON.parse(localStorage.getItem(STORAGE_KEY)).overrides['import-word'].spanish).toBe('el patio');
     const backup=freshState();backup.ratings['casa-kitchen']={status:'got',updatedAt:'today'};fireEvent.change(screen.getByLabelText('Restore full backup file'),{target:{files:[{name:'backup.json',text:async()=>JSON.stringify(backup)}]}});await screen.findByText('Full backup preview');await user.click(screen.getByRole('button',{name:'Confirm restore'}));expect(JSON.parse(localStorage.getItem(STORAGE_KEY)).ratings['casa-kitchen'].status).toBe('got');
@@ -111,6 +137,7 @@ it('switches the entire interface language, persists it, and keeps an active qui
   expect(screen.getByRole('button', { name: 'Girar tarjeta: la cocina' })).toBeInTheDocument();
   expect(screen.getByLabelText('Mostrar inglés primero')).not.toBeChecked();
   await user.click(screen.getByRole('button', { name: 'Gestionar vocabulario' }));
+  fireEvent.change(screen.getByRole('searchbox'),{target:{value:'brújula'}});
   await user.click(screen.getByRole('button', { name: '+ Añadir palabra' }));
   expect(screen.getByLabelText('Español *')).toBeInTheDocument();
   expect(screen.getByRole('button', { name: 'Guardar palabra' })).toBeInTheDocument();

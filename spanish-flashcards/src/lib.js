@@ -1,10 +1,11 @@
 import Papa from 'papaparse';
 
+// Keep the existing key so upgrading does not strand saved version 1 data.
 export const STORAGE_KEY = 'spanish-flashcards:v1';
 export const fields = ['id','spanish','english','category','pronunciation','notes','region','image'];
 export const normalize = value => value.trim().replace(/\s+/g, ' ').toLocaleLowerCase().normalize('NFC');
 export const newId = () => `user-${crypto.randomUUID()}`;
-export const freshState = () => ({ version: 1, overrides: {}, deleted: [], ratings: {}, attempts: [], quizStats: {}, preferences: { language: 'en', englishFirst: false, images: false, pronunciation: true, categories: null } });
+export const freshState = () => ({ version: 2, overrides: {}, deleted: [], ratings: {}, subdecks: [], attempts: [], quizStats: {}, preferences: { language: 'en', englishFirst: false, images: false, pronunciation: true, categories: null, deckId: null } });
 const object = v => v !== null && typeof v === 'object' && !Array.isArray(v);
 const safeId = id => typeof id === 'string' && id.trim() && id !== 'prototype' && !Object.hasOwn(Object.prototype, id);
 
@@ -29,20 +30,33 @@ export function validateVocabulary(input, generateIds = false) {
 }
 
 export function validateState(s) {
-  if (!object(s) || s.version !== 1) throw new Error('Unsupported or missing backup version.');
+  if (!object(s) || ![1, 2].includes(s.version)) throw new Error('Unsupported or missing backup version.');
+  if (s.version === 1) s = { ...s, version: 2, subdecks: [], preferences: { ...s.preferences, deckId: null } };
   for (const key of ['overrides','ratings','quizStats','preferences']) if (!object(s[key])) throw new Error(`Invalid ${key} in backup.`);
   if (!Array.isArray(s.deleted) || !s.deleted.every(safeId) || !Array.isArray(s.attempts)) throw new Error('Invalid deletion list or quiz history.');
   const entries = validateVocabulary(Object.values(s.overrides));
   if (entries.some(e => !Object.hasOwn(s.overrides, e.id)) || Object.keys(s.overrides).some(id => !safeId(id) || s.overrides[id].id !== id)) throw new Error('Vocabulary IDs must match their storage keys.');
-  for (const [id, rating] of Object.entries(s.ratings)) if (!safeId(id) || !object(rating) || !['learning','got'].includes(rating.status) || typeof rating.updatedAt !== 'string') throw new Error('Invalid flashcard rating.');
+  validateRatings(s.ratings);
+  if (!Array.isArray(s.subdecks)) throw new Error('Invalid subdecks.');
+  const deckIds = new Set(), deckNames = new Set();
+  for (const deck of s.subdecks) {
+    if (!object(deck) || !safeId(deck.id) || deckIds.has(deck.id)) throw new Error('Invalid subdeck ID.');
+    validateDeckName(deck.name, deckNames);
+    if (!Array.isArray(deck.cardIds) || !deck.cardIds.every(safeId) || new Set(deck.cardIds).size !== deck.cardIds.length) throw new Error('Invalid subdeck membership.');
+    validateRatings(deck.ratings);
+    if (Object.keys(deck.ratings).some(id => !deck.cardIds.includes(id))) throw new Error('Invalid subdeck rating membership.');
+    deckIds.add(deck.id); deckNames.add(normalize(deck.name));
+  }
   const p = s.preferences;
   if (p.language != null && !['en', 'es'].includes(p.language)) throw new Error('Invalid interface language.');
   if (p.images != null && typeof p.images !== 'boolean') throw new Error('Invalid image preference.');
   if (typeof p.englishFirst !== 'boolean' || typeof p.pronunciation !== 'boolean' || !(p.categories === null || (Array.isArray(p.categories) && p.categories.every(c => typeof c === 'string')))) throw new Error('Invalid preferences.');
+  if (p.deckId !== null && (!safeId(p.deckId) || !deckIds.has(p.deckId))) throw new Error('Invalid selected subdeck.');
   const ids = new Set();
   for (const a of s.attempts) {
     if (!object(a) || !safeId(a.id) || ids.has(a.id) || !['active','complete','incomplete'].includes(a.status) || typeof a.englishFirst !== 'boolean' || typeof a.startedAt !== 'string' || !Array.isArray(a.questions) || !Array.isArray(a.answers) || !a.questions.length || a.questions.length > 10 || a.answers.length > a.questions.length) throw new Error('Invalid quiz attempt.');
     ids.add(a.id);
+    if (a.deckId !== undefined && (a.deckId !== null && !safeId(a.deckId) || typeof a.deckName !== 'string' || !a.deckName.trim())) throw new Error('Invalid quiz deck.');
     for (const q of a.questions) {
       if (!object(q) || !safeId(q.itemId) || typeof q.prompt !== 'string' || typeof q.correct !== 'string' || typeof q.category !== 'string' || typeof q.pronunciation !== 'string' || (q.region != null && typeof q.region !== 'string') || !Array.isArray(q.choices) || q.choices.length < 2 || q.choices.length > 4 || !q.choices.every(c => typeof c === 'string' && c.trim()) || new Set(q.choices.map(normalize)).size !== q.choices.length || q.choices.filter(c => c === q.correct).length !== 1) throw new Error('Invalid quiz question.');
     }
@@ -51,6 +65,43 @@ export function validateState(s) {
   }
   for (const [id, stat] of Object.entries(s.quizStats)) if (!safeId(id) || !object(stat) || !Number.isInteger(stat.answered) || !Number.isInteger(stat.correct) || stat.answered < 0 || stat.correct < 0 || stat.correct > stat.answered) throw new Error('Invalid quiz statistics.');
   return structuredClone(s);
+}
+
+function validateRatings(ratings) {
+  if (!object(ratings)) throw new Error('Invalid flashcard rating.');
+  for (const [id, rating] of Object.entries(ratings)) if (!safeId(id) || !object(rating) || !['learning','got'].includes(rating.status) || typeof rating.updatedAt !== 'string') throw new Error('Invalid flashcard rating.');
+}
+
+function validateDeckName(name, existingNames) {
+  if (typeof name !== 'string' || !name.trim()) throw new Error('Enter a subdeck name.');
+  if (existingNames.has(normalize(name)) || ['main deck', 'mazo principal'].includes(normalize(name))) throw new Error('Choose a unique subdeck name.');
+}
+
+export function saveSubdeck(state, { id, name, cardIds }) {
+  const old = id == null ? null : state.subdecks.find(deck => deck.id === id);
+  if (id != null && !old) throw new Error('Subdeck not found.');
+  validateDeckName(name, new Set(state.subdecks.filter(deck => deck.id !== id).map(deck => normalize(deck.name))));
+  if (!Array.isArray(cardIds) || !cardIds.every(safeId)) throw new Error('Invalid subdeck membership.');
+  const members = [...new Set(cardIds)];
+  const deck = { id: old?.id ?? newId(), name: name.trim(), cardIds: members,
+    ratings: Object.fromEntries(Object.entries(old?.ratings ?? {}).filter(([key]) => members.includes(key))) };
+  return { ...state, subdecks: old ? state.subdecks.map(d => d.id === old.id ? deck : d) : [...state.subdecks, deck], preferences: { ...state.preferences, deckId: deck.id } };
+}
+
+export function deleteSubdeck(state, id) {
+  return { ...state, subdecks: state.subdecks.filter(deck => deck.id !== id), preferences: { ...state.preferences, deckId: state.preferences.deckId === id ? null : state.preferences.deckId } };
+}
+
+export function subdeckEntries(entries, deck) {
+  const byId = new Map(entries.map(entry => [entry.id, entry]));
+  return deck.cardIds.map(id => byId.get(id)).filter(Boolean);
+}
+
+export function rateCard(state, cardId, status, deckId = null) {
+  if (!['learning', 'got'].includes(status)) throw new Error('Invalid flashcard rating.');
+  const rating = { status, updatedAt: new Date().toISOString() };
+  if (deckId === null) return { ...state, ratings: { ...state.ratings, [cardId]: rating } };
+  return { ...state, subdecks: state.subdecks.map(deck => deck.id === deckId && deck.cardIds.includes(cardId) ? { ...deck, ratings: { ...deck.ratings, [cardId]: rating } } : deck) };
 }
 
 export function loadState(storage) {
@@ -76,7 +127,8 @@ export function upsert(state, entries) {
 export function removeEntry(state, id) {
   return { ...state, deleted: [...new Set([...state.deleted, id])] };
 }
-export function resetRatings(state, ids) {
+export function resetRatings(state, ids, deckId = null) {
+  if (deckId !== null) return { ...state, subdecks: state.subdecks.map(deck => deck.id === deckId ? { ...deck, ratings: {} } : deck) };
   const ratings = { ...state.ratings }; ids.forEach(id => delete ratings[id]); return { ...state, ratings };
 }
 export function parseImport(text, format) {
