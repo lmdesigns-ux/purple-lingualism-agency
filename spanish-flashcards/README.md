@@ -1,6 +1,12 @@
 # Mi vocabulario
 
-A personal Spanish vocabulary app built with React, Vite, and plain CSS. The 104-entry collection includes the original 16-word Mi Casa starter deck, the remaining vocabulary from your Housing in Spanish slides, and two learner-requested bookshelf/shelf cards. It runs locally and does not connect to tutoring records or external programs.
+A personal Spanish vocabulary app built with React, Vite, and plain CSS. The 151-entry collection includes the original 16-word Mi Casa starter deck, the remaining vocabulary from your Housing in Spanish slides, two learner-requested bookshelf/shelf cards, and 47 vocabulary cards from Describe Things in Spanish. It runs locally and does not connect to tutoring records or external programs.
+
+## Describe Things collection
+
+Source: `../Spanish Programs/The Spanish Challenge Community x Blacklingual/Huevo/Blacklingual Discor_  Describe Things in Spanish.pdf`, pages 2–7. Adds 47 cards in Size & measure, Shapes, Texture & material, Quality & condition, Quantity, and Sensory descriptions. The repeated **suave** appears once; **viejo/a** and **antiguo/a** have separate cards to practice their different meanings. Cards include adjective agreement guidance, approximate pronunciation, and source pages.
+
+Refresh the app, open **Categories**, and select these six categories to practice for Huevo. Existing cards, edits, and progress are preserved.
 
 ## Housing collection
 
@@ -106,3 +112,5 @@ npm run test:browser
 The browser tests start a development server automatically if needed and cover keyboard flipping, refresh persistence, narrow-screen overflow, complete quiz scoring/retries, and full-backup download/restore. Screenshots are written under ignored `test-results/`.
 
 No backend, API keys, audio service, or hosted deployment is required.
+
+Flashcards support **Show images** alongside pronunciation and card order. This replaces the English side with the optional `image` URL; words without an image (or with a failed image) use English. Image mode relabels card order to **Show image first** and does not change quizzes. Housing pictures are extracted from the supplied slides. Add an Image URL when editing vocabulary, or include `image` in JSON/CSV imports; use an HTTP(S) URL or a path beginning with `/`. Images and the display preference survive vocabulary exports and full backups respectively.

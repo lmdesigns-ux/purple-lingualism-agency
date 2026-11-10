@@ -7,6 +7,23 @@ import { freshState, STORAGE_KEY, saveState } from './lib';
 
 beforeEach(()=>{localStorage.clear();vi.restoreAllMocks();vi.spyOn(window,'confirm').mockReturnValue(true);});
 describe('practice interface',()=>{
+  it('replaces English with slide images, persists the setting, and falls back on image errors',async()=>{
+    const user=userEvent.setup();const {unmount}=render(<App/>);
+    await user.click(screen.getByLabelText('Show images'));
+    await user.click(screen.getByLabelText('Show image first'));
+    const image=screen.getByRole('img');
+    expect(image).toHaveAttribute('src','/images/housing/casa-kitchen.jpg');
+    expect(screen.queryByText('the kitchen',{exact:true})).not.toBeInTheDocument();
+    await user.click(screen.getByRole('button',{name:'Flip card: image prompt'}));
+    expect(screen.getByText('la cocina',{exact:true})).toBeInTheDocument();
+    unmount();render(<App/>);
+    expect(screen.getByLabelText('Show images')).toBeChecked();
+    fireEvent.error(screen.getByRole('img'));
+    expect(screen.getByRole('button',{name:'Flip card: the kitchen'})).toBeInTheDocument();
+    await user.click(screen.getByRole('button',{name:'Quiz',exact:true}));
+    expect(screen.queryByLabelText('Show images')).not.toBeInTheDocument();
+    expect(screen.getByLabelText('Show English first')).toBeInTheDocument();
+  });
   it('starts categories collapsed, summarizes selections, and keeps filters after closing and refresh',async()=>{
     const user=userEvent.setup();const {unmount}=render(<App/>);
     expect(screen.getByRole('button',{name:'Choose categories'})).toHaveAttribute('aria-expanded','false');

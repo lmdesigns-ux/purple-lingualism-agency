@@ -3,7 +3,7 @@ import base from './data/vocabulary.json';
 import { freshState, validateState, validateVocabulary, effectiveVocabulary, upsert, removeEntry, resetRatings, toCSV, parseImport, loadState, saveState, STORAGE_KEY, buildQuiz, answerAttempt, normalize } from './lib';
 
 describe('vocabulary and persistence', () => {
-  it('contains 104 valid housing entries in ten categories', () => { expect(validateVocabulary(base)).toHaveLength(104); expect(new Set(base.map(e=>e.category)).size).toBe(10); });
+  it('contains 151 valid housing and description entries in sixteen categories', () => { expect(validateVocabulary(base)).toHaveLength(151); expect(new Set(base.map(e=>e.category)).size).toBe(16); });
   it('preserves edits, custom entries and deletions through bundled updates', () => {
     let s = upsert(freshState(), [{...base[0],spanish:'mi cocina'}, {...base[1],id:'personal',spanish:'custom'}]);
     s = removeEntry(s, base[2].id);

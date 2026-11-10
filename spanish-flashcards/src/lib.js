@@ -1,10 +1,10 @@
 import Papa from 'papaparse';
 
 export const STORAGE_KEY = 'spanish-flashcards:v1';
-export const fields = ['id','spanish','english','category','pronunciation','notes','region'];
+export const fields = ['id','spanish','english','category','pronunciation','notes','region','image'];
 export const normalize = value => value.trim().replace(/\s+/g, ' ').toLocaleLowerCase().normalize('NFC');
 export const newId = () => `user-${crypto.randomUUID()}`;
-export const freshState = () => ({ version: 1, overrides: {}, deleted: [], ratings: {}, attempts: [], quizStats: {}, preferences: { englishFirst: false, pronunciation: true, categories: null } });
+export const freshState = () => ({ version: 1, overrides: {}, deleted: [], ratings: {}, attempts: [], quizStats: {}, preferences: { englishFirst: false, images: false, pronunciation: true, categories: null } });
 const object = v => v !== null && typeof v === 'object' && !Array.isArray(v);
 const safeId = id => typeof id === 'string' && id.trim() && id !== 'prototype' && !Object.hasOwn(Object.prototype, id);
 
@@ -18,6 +18,7 @@ export function validateVocabulary(input, generateIds = false) {
       if (row[key] != null && typeof row[key] !== 'string') throw new Error(`Row ${i + 1}: ${key} must be text.`);
       entry[key] = (row[key] ?? '').trim();
     }
+    if (entry.image && !/^(https?:\/\/|\/(?!\/))/.test(entry.image)) throw new Error(`Row ${i + 1}: image must be an HTTP(S) URL or local path starting with /.`);
     if (!entry.id && generateIds) entry.id = newId();
     if (!safeId(entry.id)) throw new Error(`Row ${i + 1}: missing or invalid ID.`);
     if (seen.has(entry.id)) throw new Error(`Row ${i + 1}: duplicate ID ${entry.id}.`);
@@ -35,6 +36,7 @@ export function validateState(s) {
   if (entries.some(e => !Object.hasOwn(s.overrides, e.id)) || Object.keys(s.overrides).some(id => !safeId(id) || s.overrides[id].id !== id)) throw new Error('Vocabulary IDs must match their storage keys.');
   for (const [id, rating] of Object.entries(s.ratings)) if (!safeId(id) || !object(rating) || !['learning','got'].includes(rating.status) || typeof rating.updatedAt !== 'string') throw new Error('Invalid flashcard rating.');
   const p = s.preferences;
+  if (p.images != null && typeof p.images !== 'boolean') throw new Error('Invalid image preference.');
   if (typeof p.englishFirst !== 'boolean' || typeof p.pronunciation !== 'boolean' || !(p.categories === null || (Array.isArray(p.categories) && p.categories.every(c => typeof c === 'string')))) throw new Error('Invalid preferences.');
   const ids = new Set();
   for (const a of s.attempts) {
