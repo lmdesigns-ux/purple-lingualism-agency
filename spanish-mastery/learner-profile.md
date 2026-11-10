@@ -19,3 +19,4 @@ Initial spontaneous writing sample recorded in S001 (S001-R001). No level or mas
 - Especially wants practice based on The Spanish Challenge Community materials.
 - Community ranks increase: nuevo miembro, nido, huevo, polluelo, pajarito, cuervo. Requirements inside a named level folder are challenges to reach that level. Challenges are passed at challenge meetings; earned badges go in Badges. Side quests offer separate bonus badges.
 - On 2026-11-09, learner confirms working toward Huevo and selects Mi Casa as next badge preparation target. Next meeting date unknown. Uploaded artifacts are summarized in progress.md; do not treat them as our direct speaking assessments.
+- Mi Casa earned: learner reported badge addition on 2026-11-09; image inspected and achievement logged as EXT-20261109-002. Next learning objective and evaluator feedback not yet supplied. Huevo level completion not claimed.

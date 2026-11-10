@@ -1,5 +1,11 @@
 # Session history
 
+## Mi Casa challenge debrief — 2026-11-09
+EXT-20261109-003 records learner report: overall went well, practice helped substantially, pronunciation slips with entre and microondas, and article/gender slips such as reported el segundo pentalla. Learner identified intended feminine correction; tutor supplies standard spelling la segunda pantalla. No audio or evaluator quote; do not equate typed misspellings with pronunciation or claim a measured fluency/causal improvement. Future short work: EN-tre / mi-cro-ON-das stress guides, assess actual sounds only with appropriate evidence, and meaningful noun-group agreement (la segunda pantalla / el segundo monitor). Badge remains earned; delayed checks November 16 / December 9 unchanged. No new exercise pending.
+
+## Mi Casa community achievement — reported 2026-11-09
+Learner announced intent to attempt Mi Casa today, then reported adding the badge. Inspected Badges/2._Huevo_Describe_your_house_badge.png: MI CASA house award, BLACKLINGUAL, 2026. EXT-20261109-002 records learner report plus artifact provenance. Mi Casa challenge marked earned; no direct observation of meeting performance or specific evaluator feedback. Huevo rank completion, durable mastery and automaticity not inferred. Keep November 16 / December 9 retention reviews. Next ask brief debrief and confirm next goal; no new exercise or failed/pending assessment created.
+
 ## S002 — 2026-11-09 — Mi Casa preparation
 Status: open; learner selects Mi Casa to work toward Huevo (S002-R000). Learner reports one hour from 10:50 a.m., planned end 11:50 a.m. local; do not assume independently measured time. Next challenge meeting unknown. MC001 housing sample saved as S002-R001.
 

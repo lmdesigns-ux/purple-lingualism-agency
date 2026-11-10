@@ -5,6 +5,8 @@ Updated: 2026-11-09 (America/New_York).
 ## Current priority
 S002 Mi Casa practice completed 2026-11-09; no exercise pending. Learner is working toward Huevo. All five official areas addressed across tasks, but no single fully accurate independent integrated rehearsal or observed speaking assessment. No badge awarded here.
 
+Mi Casa challenge EARNED: learner reported badge addition 2026-11-09; inspected 2._Huevo_Describe_your_house_badge.png confirms MI CASA award artifact (EXT-20261109-002). Debrief EXT-20261109-003: challenge went well, learner felt practice helped, reports pronunciation trouble with entre/microondas and agreement slips, including el segundo pantalla, with self-correction toward la segunda pantalla. Raw written pentalla/micoondas preserved; do not infer actual sounds from spelling. No audio or specific evaluator feedback. Next confirm chosen objective, with pronunciation and compact noun-group agreement available as short review priorities. Retention checks remain 2026-11-16 and 2026-12-09. No Huevo completion, automaticity or durable-mastery claim.
+
 Next session: ask available time, then collect a short home tour before displaying examples. Include home type, rooms, ten daily-use objects, general location and usual climate. Prioritize noun/article consistency and new-vocabulary recall with minimal interruption. Review targets: 2026-11-16 and 2026-12-09, relative to dated S002 practice, not assumed S001 response dates. Reviews happen when learner returns; no reminders running.
 
 S002 evidence: successful same-session inodoro recall; correct immediate habitual/current rain distinction; puertas blancas / sofás blancos correct with deliberate check; supported un clima correct after -a heuristic clarification. Final targeted microondas, lavaplatos and mesa de centro correct; una nevera still inconsistent. Longer retention and automaticity unassessed. Prior estaban/estuvieron uncertainty remains a later learning priority.
@@ -28,7 +30,7 @@ Learner reflection after S002 (S002-R021): wants to slow down rather than use fi
 5. Use concrete scenes for estaban/estuvieron when that becomes selected objective; earlier explanation did not establish clarity.
 
 ## Outstanding questions
-- Next challenge meeting date and any community feedback?
+- Debrief recorded: overall went well and practice felt helpful; pronunciation and agreement remain priorities. Exact pronunciation issue and any evaluator-specific feedback unknown. Next chosen challenge/meeting date unknown.
 - Any outside assistance used during samples? Absence of report is not verified absence.
 - Real or invented layout: first sample three bedrooms, integrated tour two; clarify only if relevant, not a grammatical error.
 - Wider article/adjective difficulty: word-specific knowledge versus retrieval versus heuristic effects needs more evidence. -a heuristic supported specifically for clima.
@@ -52,7 +54,7 @@ Checklist images inspected directly: Nido/Nido_Checklist_Progress.png; Huevo/Hue
 | Huevo | Tengo hambre — food-ordering skit | 2._Huevo_Order_food_badge.png | Not assessed against full rubric |
 | Huevo | Reto — order food in real life and report experience in community celebrations channel | 2._Huevo_Order_food_challenge_badge.png | Outside award artifact; speech not observed here |
 | Huevo | Descripciones — describe random photo: colors, tastes, shapes, amounts, sizes, opinions, there is/are | No matching earned badge found | Candidate preparation priority; completion unknown |
-| Huevo | Mi casa — building type, rooms, ten everyday objects, location and local climate | No matching earned badge found | Selected target; S002 written preparation complete, official outcome unknown |
+| Huevo | Mi casa — building type, rooms, ten everyday objects, location and local climate | 2._Huevo_Describe_your_house_badge.png; inspected, learner report 2026-11-09 | Community challenge earned; retention/automaticity not assessed by artifact |
 
 Badge paths above are under The Spanish Challenge Community x Blacklingual/Badges/. This is an artifact inventory interpreted using learner's statement that these are earned badges; no award dates or assessment scores inferred. No Huevo level-completion badge found; learner confirms working toward Huevo, with Mi Casa selected.
 
@@ -63,7 +65,7 @@ Available preparation sources (Housing PDF text reviewed for S002; other documen
 
 Bonus tracking: Bonus Challenge Badges/Bonus_Use_Spanish_in_a_taxi_or_uber_badge.png is an earned-artifact candidate consistent with the learner's explanation and the overlaid taxi badge in checklist 1. Two bonus checklist images list possible side quests; their other listings do not establish completion. Bonus awards remain separate from rank requirements. Exact award date unknown.
 
-Suggested first preparation options: Mi casa (connects location, everyday noun/article pairs and descriptions) or Descripciones (connects vocabulary precision, agreement, quantity and existence). Let learner confirm next challenge; do not assume lack of ability from absent badge. Read matching source PDF before building rehearsal. Use new contexts and assess full checklist coverage across manageable activities; distinguish written rehearsal from official spoken meeting performance.
+Mi Casa is now earned. Descripciones remains a possible next Huevo preparation goal without a matching local badge; let learner confirm next challenge and do not infer inability from missing artifact. Read matching source PDF before rehearsal. Continue Mi Casa in occasional unfamiliar contexts for retention; distinguish written rehearsal, community award and directly observed performance.
 
 ### iTalki
 Four image files present (one screenshot and three WhatsApp images dated in filenames in November 2024). Contents not reviewed; no teacher feedback or learning outcome inferred. Consult selected notes when learner wants to practice them and preserve provenance.
