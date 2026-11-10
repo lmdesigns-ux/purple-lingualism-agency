@@ -4,7 +4,7 @@ export const STORAGE_KEY = 'spanish-flashcards:v1';
 export const fields = ['id','spanish','english','category','pronunciation','notes','region','image'];
 export const normalize = value => value.trim().replace(/\s+/g, ' ').toLocaleLowerCase().normalize('NFC');
 export const newId = () => `user-${crypto.randomUUID()}`;
-export const freshState = () => ({ version: 1, overrides: {}, deleted: [], ratings: {}, attempts: [], quizStats: {}, preferences: { englishFirst: false, images: false, pronunciation: true, categories: null } });
+export const freshState = () => ({ version: 1, overrides: {}, deleted: [], ratings: {}, attempts: [], quizStats: {}, preferences: { language: 'en', englishFirst: false, images: false, pronunciation: true, categories: null } });
 const object = v => v !== null && typeof v === 'object' && !Array.isArray(v);
 const safeId = id => typeof id === 'string' && id.trim() && id !== 'prototype' && !Object.hasOwn(Object.prototype, id);
 
@@ -36,6 +36,7 @@ export function validateState(s) {
   if (entries.some(e => !Object.hasOwn(s.overrides, e.id)) || Object.keys(s.overrides).some(id => !safeId(id) || s.overrides[id].id !== id)) throw new Error('Vocabulary IDs must match their storage keys.');
   for (const [id, rating] of Object.entries(s.ratings)) if (!safeId(id) || !object(rating) || !['learning','got'].includes(rating.status) || typeof rating.updatedAt !== 'string') throw new Error('Invalid flashcard rating.');
   const p = s.preferences;
+  if (p.language != null && !['en', 'es'].includes(p.language)) throw new Error('Invalid interface language.');
   if (p.images != null && typeof p.images !== 'boolean') throw new Error('Invalid image preference.');
   if (typeof p.englishFirst !== 'boolean' || typeof p.pronunciation !== 'boolean' || !(p.categories === null || (Array.isArray(p.categories) && p.categories.every(c => typeof c === 'string')))) throw new Error('Invalid preferences.');
   const ids = new Set();

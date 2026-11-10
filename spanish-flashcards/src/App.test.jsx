@@ -101,3 +101,27 @@ describe('practice interface',()=>{
     const state=freshState();state.attempts=[{id:'interrupted',status:'active',startedAt:'today',englishFirst:false,answers:[],questions:[{itemId:base[0].id,prompt:'la cocina',correct:'the kitchen',category:'Rooms',pronunciation:'',choices:['the kitchen','the oven']}]}];saveState(state);render(<App/>);expect(JSON.parse(localStorage.getItem(STORAGE_KEY)).attempts[0].status).toBe('incomplete');
   });
 });
+
+it('switches the entire interface language, persists it, and keeps an active quiz and card direction', async () => {
+  const user = userEvent.setup();
+  const { unmount } = render(<App/>);
+  await user.click(screen.getByRole('button', { name: 'Español' }));
+  expect(document.documentElement.lang).toBe('es');
+  expect(screen.getByRole('button', { name: 'Español' })).toHaveAttribute('aria-pressed', 'true');
+  expect(screen.getByRole('button', { name: 'Girar tarjeta: la cocina' })).toBeInTheDocument();
+  expect(screen.getByLabelText('Mostrar inglés primero')).not.toBeChecked();
+  await user.click(screen.getByRole('button', { name: 'Gestionar vocabulario' }));
+  await user.click(screen.getByRole('button', { name: '+ Añadir palabra' }));
+  expect(screen.getByLabelText('Español *')).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: 'Guardar palabra' })).toBeInTheDocument();
+  unmount(); render(<App/>);
+  expect(screen.getByRole('button', { name: 'Tarjetas' })).toBeInTheDocument();
+  await user.click(screen.getByRole('button', { name: 'Prueba', exact: true }));
+  await user.click(screen.getByRole('button', { name: 'Iniciar prueba →' }));
+  expect(screen.getByText('Pregunta 1 de 10')).toBeInTheDocument();
+  await user.click(screen.getByRole('button', { name: 'English', exact: true }));
+  expect(screen.getByText('Question 1 of 10')).toBeInTheDocument();
+  expect(window.confirm).not.toHaveBeenCalled();
+  expect(document.documentElement.lang).toBe('en');
+  expect(JSON.parse(localStorage.getItem(STORAGE_KEY)).preferences.language).toBe('en');
+});

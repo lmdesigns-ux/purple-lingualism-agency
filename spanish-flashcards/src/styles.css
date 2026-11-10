@@ -5,3 +5,5 @@
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
 .settings label{white-space:nowrap}.card-image{display:block;width:100%;height:260px;object-fit:contain;background:#fff}.image-hint{margin-bottom:10px}@media(max-width:600px){.card-image{height:220px}.settings{column-gap:20px;row-gap:14px}}
+
+.language-switch{display:inline-flex;align-items:center;gap:4px;flex-shrink:0;letter-spacing:normal}.language-switch button{font-size:12px;letter-spacing:1px;padding:5px 8px;border:2px solid black;min-height:32px}.language-switch button[aria-pressed=true]{background:black;color:white}.language-switch button:hover{transform:none}header>.eyebrow{align-items:center}

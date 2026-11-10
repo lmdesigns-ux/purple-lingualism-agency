@@ -42,6 +42,8 @@ Stop the development server before running preview, which intentionally uses the
 
 ## Practice
 
+Use **ES / EN** at the top to switch the interface between Spanish and English. The selected language is saved in this browser and included in full backups. Switching languages keeps your current card, quiz, and progress. **Show English first** controls the practice direction independently. Vocabulary text and personal notes retain their original language.
+
 Category choices start collapsed to leave more space for practice. Click **Categories** to open the panel; its compact summary shows the current selection and word count. Toggle individual categories, use **All cards** or **Clear selection**, then click **Done** (or Categories again) to collapse it. Selections are saved even when the panel is closed and apply to both flashcards and quizzes.
 
 - **Flash Cards:** select any combination of categories or All cards. Tap the card, or focus it and press Enter/Space, to reveal the other language. Use Previous/Next to revisit remaining words. Still learning saves your self-rating and advances while keeping the card in practice. Got it removes the card from flashcard practice until you reset its deck, including after refresh, shuffle, or category changes. It stays in your vocabulary collection and remains available for quizzes. When all selected cards are Got it, the completion screen still offers Reset this deck.
