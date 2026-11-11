@@ -1,6 +1,6 @@
 # Mi vocabulario
 
-A personal Spanish vocabulary app built with React, Vite, and plain CSS. The 550-entry collection covers vocabulary from all eight Nido and Huevo slide decks, including individual words extracted from their Spanish examples, plus the two learner-requested bookshelf/shelf cards. It runs locally and does not connect to tutoring records or external programs.
+A personal Spanish vocabulary app built with React, Vite, and plain CSS. The 585-entry collection covers vocabulary from all eight Nido and Huevo slide decks, including individual words extracted from their Spanish examples, plus the two learner-requested bookshelf/shelf cards, crear/criar, and 21 selected number/example and rule cards from Numbers in Spanish slides 60–66, plus 12 requested quantity and ordinal terms for Tres mil. It runs locally and does not connect to tutoring records or external programs.
 
 ## Nido and Huevo vocabulary
 

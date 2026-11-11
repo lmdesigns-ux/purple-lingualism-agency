@@ -1,4 +1,5 @@
 export const spanish = {
+  "Numbers & quantities": "Números y cantidades",
   "Vocabulary list ratings show main-deck progress.": "Las valoraciones de esta lista muestran el progreso del mazo principal.",
   "Replace this browser’s saved vocabulary, subdecks, progress, preferences and quiz history with this backup? Export a full backup first if you want to keep the current data.": "¿Reemplazar el vocabulario, los submazos, el progreso, las preferencias y el historial de pruebas guardados con esta copia? Exporta primero una copia completa si deseas conservar los datos actuales.",
   "Practice deck": "Mazo de práctica",

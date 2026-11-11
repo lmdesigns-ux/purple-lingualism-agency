@@ -22,3 +22,7 @@ Initial spontaneous writing sample recorded in S001 (S001-R001). No level or mas
 - Mi Casa earned: learner reported badge addition on 2026-11-09; image inspected and achievement logged as EXT-20261109-002. Next learning objective and evaluator feedback not yet supplied. Huevo level completion not claimed.
 
 - On 2026-11-10, learner reports earning the final badge through a two-picture description challenge and attaining Huevo (EXT-20261110-001). This supersedes the earlier working-toward-Huevo status. Group-leader feedback was positive about overall performance and vocabulary, with agreement/color-preposition and pronunciation points to investigate; no direct speaking assessment here. Next practice objective not yet selected.
+
+- On 2026-11-10, newly supplied Descripciones and Huevo award images inspected, corroborating Huevo attainment (EXT-20261110-003). Polluelo checklist now available and inspected; requirements summarized in progress.md. Supporting PDFs inventoried; next preparation target not yet selected.
+
+- On 2026-11-10, learner selects Tres mil next and limits new number vocabulary to Numbers in Spanish slides 60–66, with separate rule cards. Avoid populating the deck with all numbers 0–3,000.

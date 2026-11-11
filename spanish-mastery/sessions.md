@@ -319,3 +319,12 @@ EXT-20261110-001 preserves the learner report verbatim. Learner reports the fina
 No practice exercise or new assessment conducted. Agreement remains a review priority; color-preposition issue needs the exact phrase because de color can be valid. Pronunciation is reported rather than evaluated from audio. Pepinillos has been supplied, not independently retrieved or retention-tested. Next clarify the color phrase if remembered, then let learner choose practice focus; keep Mi Casa review dates 2026-11-16 and 2026-12-09. No app vocabulary changes or community messages.
 
 Follow-up EXT-20261110-002: learner recalls “Un teclado de negro.” Explain un teclado negro, also valid un teclado de color negro. Un and negro already match masculine singular teclado; the specific error is extra de. A material contrast such as un teclado de plástico may help distinguish uses without claiming a general cause. Other agreement/pronunciation details remain unknown. No independent transfer test or new exercise assigned.
+
+### Materials update — 2026-11-10
+Learner reported new earned badges and Polluelo materials. Inspected Descripciones and Huevo award images, corroborating prior Huevo attainment. Inspected Polluelo checklist and summarized all requirements in progress.md; five supporting PDFs inventoried, not yet read. Evidence: EXT-20261110-003. No practice or assessment conducted; next challenge remains unselected. Mi Casa review dates unchanged: 2026-11-16 and 2026-12-09.
+
+### Tres mil preparation setup — 2026-11-10
+Learner selected Tres mil next. Added 18 number/example cards and three separate rule cards from text-reviewed Numbers in Spanish slides 60–66; no full number-range generation. Evidence: PLAN-20261110-001. No practice or assessment conducted and no completion status changed. Next: unassisted number-use sample before targeted practice.
+
+### Tres mil vocabulary follow-up — 2026-11-10
+Added 12 missing quantity/ordinal terms requested by learner; reused four existing entries covering some, a lot, too much and enough. Ordinal segundo/a is separate from the time unit el segundo. Evidence: PLAN-20261110-002. No practice or achievement status change.

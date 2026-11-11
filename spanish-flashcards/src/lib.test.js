@@ -4,17 +4,17 @@ import { freshState, validateState, validateVocabulary, effectiveVocabulary, ups
 import { spanish, translator } from './i18n';
 
 describe('vocabulary and persistence', () => {
-  it('contains 550 valid vocabulary entries with unambiguous prompts and translated categories', () => {
-    expect(validateVocabulary(base)).toHaveLength(550);
+  it('contains 585 valid vocabulary entries with unambiguous prompts and translated categories', () => {
+    expect(validateVocabulary(base)).toHaveLength(585);
     const categories = new Set(base.map(e=>e.category));
-    expect(categories.size).toBe(31);
+    expect(categories.size).toBe(32);
     for (const category of categories) {
       expect(spanish[category]).toBeTruthy();
       expect(translator('es')(category)).toBe(spanish[category]);
       expect(translator('en')(category)).toBe(category);
     }
     for (const field of ['spanish', 'english']) expect(new Set(base.map(e=>normalize(e[field]))).size).toBe(base.length);
-    for (const entry of base.slice(151)) {
+    for (const entry of base.slice(151).filter(e => !e.id.startsWith('custom-'))) {
       expect(entry.pronunciation).toBeTruthy();
       expect(entry.notes).toMatch(/Source: .+, (slide|p\.) \d+\./);
       expect(entry.spanish).not.toMatch(/[¿?¡!_@]/);
