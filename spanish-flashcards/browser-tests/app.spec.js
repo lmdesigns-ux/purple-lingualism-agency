@@ -79,3 +79,80 @@ test('practices new vocabulary and keeps category selection and progress across 
   expect(saved.ratings['nido-levantar'].status).toBe('got');
   expect(saved.preferences.categories).toEqual(['Daily routines']);
 });
+
+test('saves a focused deck, keeps learned membership, resets independently, and restores it from a full backup',async({page})=>{
+  await page.goto('/');
+  await page.getByRole('button',{name:'Create subdeck'}).click();
+  await page.getByLabel('Subdeck name').fill('My focused review');
+  await page.getByLabel('Find cards').fill('la cocina');
+  await page.getByRole('checkbox',{name:'Include card: la cocina',exact:true}).check();
+  await page.getByLabel('Find cards').fill('el baño');
+  await page.getByRole('checkbox',{name:'Include card: el baño',exact:true}).check();
+  await page.getByRole('button',{name:'Save subdeck'}).click();
+  const id=await page.getByLabel('Practice deck').inputValue();
+  await expect(page.getByRole('button',{name:'Flip card: la cocina'})).toBeVisible();
+  await page.getByRole('button',{name:'Got it',exact:true}).click();
+  await page.getByRole('button',{name:'Got it',exact:true}).click();
+  await expect(page.getByText('All done for this deck!')).toBeVisible();
+  await page.reload();
+  await expect(page.getByLabel('Practice deck')).toHaveValue(id);
+  await expect(page.getByText('All done for this deck!')).toBeVisible();
+  await page.getByRole('button',{name:'Edit subdeck'}).click();
+  await expect(page.getByRole('checkbox',{name:'Include card: la cocina',exact:true})).toBeChecked();
+  await expect(page.getByRole('checkbox',{name:'Include card: el baño',exact:true})).toBeChecked();
+  await page.getByRole('button',{name:'Cancel',exact:true}).click();
+  await page.getByLabel('Practice deck').selectOption('');
+  await expect(page.getByRole('button',{name:'Flip card: la cocina'})).toBeVisible();
+  await page.getByLabel('Practice deck').selectOption(id);
+  page.once('dialog',dialog=>dialog.dismiss());
+  await page.getByRole('button',{name:'Reset subdeck'}).click();
+  await expect(page.getByText('All done for this deck!')).toBeVisible();
+  page.once('dialog',dialog=>dialog.accept());
+  await page.getByRole('button',{name:'Reset subdeck'}).click();
+  await expect(page.getByRole('button',{name:'Flip card: la cocina'})).toBeVisible();
+  await page.getByRole('button',{name:'Got it',exact:true}).click();
+  await page.getByRole('button',{name:'Manage Vocabulary'}).click();
+  const downloadPromise=page.waitForEvent('download');
+  await page.getByRole('button',{name:'Export full backup'}).click();
+  const backupPath=await (await downloadPromise).path();
+  await page.getByRole('button',{name:'Flash Cards',exact:true}).click();
+  page.once('dialog',dialog=>dialog.accept());
+  await page.getByRole('button',{name:'Delete subdeck'}).click();
+  await expect(page.getByLabel('Practice deck')).toHaveValue('');
+  await page.getByRole('button',{name:'Manage Vocabulary'}).click();
+  await page.getByLabel('Restore full backup file').setInputFiles(backupPath);
+  await expect(page.getByText(/1 saved subdecks/)).toBeVisible();
+  page.once('dialog',dialog=>dialog.accept());
+  await page.getByRole('button',{name:'Confirm restore'}).click();
+  await page.getByRole('button',{name:'Flash Cards',exact:true}).click();
+  await expect(page.getByLabel('Practice deck')).toHaveValue(id);
+  await expect(page.getByRole('button',{name:'Flip card: el baño'})).toBeVisible();
+  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('spanish-flashcards:v1')));
+  expect(saved.version).toBe(2);
+  expect(saved.subdecks[0].cardIds).toEqual(['casa-kitchen','casa-bathroom']);
+  expect(saved.subdecks[0].ratings['casa-kitchen'].status).toBe('got');
+  expect(saved.ratings).toEqual({});
+});
+
+test('migrates old progress and makes a category-based subdeck usable at 320px in both languages',async({page})=>{
+  await page.goto('/');
+  await page.evaluate(()=>localStorage.setItem('spanish-flashcards:v1',JSON.stringify({
+    version:1,overrides:{},deleted:[],ratings:{'casa-kitchen':{status:'got',updatedAt:'2026-11-01'}},attempts:[],quizStats:{},
+    preferences:{language:'en',englishFirst:false,images:false,pronunciation:true,categories:['Rooms']}
+  })));
+  await page.reload();
+  await expect(page.getByRole('button',{name:'Flip card: el baño'})).toBeVisible();
+  await page.setViewportSize({width:320,height:740});
+  await page.getByRole('button',{name:'Create subdeck'}).click();
+  await page.getByLabel('Subdeck name').fill('A long name for my focused vocabulary practice');
+  await page.getByRole('radio',{name:/Main deck’s selected categories/}).check();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+  await page.getByRole('button',{name:'Save subdeck'}).click();
+  await expect(page.getByRole('button',{name:'Flip card: la cocina'})).toBeVisible();
+  await page.getByRole('button',{name:'Español'}).click();
+  await page.getByRole('button',{name:'Editar submazo'}).click();
+  await expect(page.getByLabel('Nombre del submazo')).toBeVisible();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+  await page.getByRole('button',{name:'Cancelar',exact:true}).click();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+});

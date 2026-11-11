@@ -4,7 +4,7 @@ import { translator } from './i18n';
 
 const PAGE_SIZE = 25;
 
-export default function SubdeckEditor({ deck, entries, knownEntries, seedIds, language, onSave, onCancel }) {
+export default function SubdeckEditor({ deck, entries, knownEntries, seedIds, visibleMainIds = [], language, onSave, onCancel }) {
   const t = translator(language);
   const [name, setName] = useState(deck?.name ?? '');
   const [cardIds, setCardIds] = useState(deck?.cardIds ?? []);
@@ -41,6 +41,7 @@ export default function SubdeckEditor({ deck, entries, knownEntries, seedIds, la
       {!deck && <fieldset className="deck-seed"><legend>{t('Start with')}</legend>
         <label><input type="radio" name="deck-seed" checked={seed === 'empty'} onChange={() => { setSeed('empty'); setCardIds([]); }}/>{t('An empty subdeck')}</label>
         <label><input type="radio" name="deck-seed" checked={seed === 'categories'} onChange={() => { setSeed('categories'); setCardIds(seedIds); }}/>{t('Main deck’s selected categories')} ({seedIds.length})</label>
+        <label><input type="radio" name="deck-seed" checked={seed === 'visible'} onChange={() => { setSeed('visible'); setCardIds(visibleMainIds); }}/>{t('Main deck’s visible cards')} ({visibleMainIds.length})</label>
       </fieldset>}
       <p className="deck-counts" role="status">{t('Assigned')}: {cardIds.length} · {t('Unavailable')}: {unavailableIds.length}</p>
       <div className="editor-filters">

@@ -1,4 +1,6 @@
 export const spanish = {
+  "Vocabulary list ratings show main-deck progress.": "Las valoraciones de esta lista muestran el progreso del mazo principal.",
+  "Replace this browser’s saved vocabulary, subdecks, progress, preferences and quiz history with this backup? Export a full backup first if you want to keep the current data.": "¿Reemplazar el vocabulario, los submazos, el progreso, las preferencias y el historial de pruebas guardados con esta copia? Exporta primero una copia completa si deseas conservar los datos actuales.",
   "Practice deck": "Mazo de práctica",
   "Main deck": "Mazo principal",
   "Create subdeck": "Crear submazo",
@@ -13,6 +15,7 @@ export const spanish = {
   "Unavailable": "No disponibles",
   "Choose membership here. Marking a card Got it only hides it during practice.": "Elige aquí las tarjetas del submazo. Marcar una tarjeta como aprendida solo la oculta durante la práctica.",
   "Start with": "Empezar con",
+  "Main deck’s visible cards": "Las tarjetas visibles del mazo principal",
   "An empty subdeck": "Un submazo vacío",
   "Main deck’s selected categories": "Las categorías seleccionadas del mazo principal",
   "Find cards": "Buscar tarjetas",

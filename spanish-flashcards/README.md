@@ -71,6 +71,20 @@ Stop the development server before running preview, which intentionally uses the
 
 ## Practice
 
+### Saved subdecks
+
+Use **Create subdeck** above practice to name a focused collection. Start empty, or choose **Main deck’s selected categories** to copy the main deck's current category selection, including learned cards. Choose **Main deck’s visible cards** to copy only unhidden cards in that same selection: unrated and Still learning cards are included, while Got it cards are excluded. This always uses main-deck progress, even when creating from another subdeck, and the option shows the number of cards it will copy. Names must be nonblank and unique (ignoring case and extra spaces); Main deck/Mazo principal are reserved. Save selects the new subdeck. Use **Practice deck** to return to any saved subdeck or the main deck; that choice is remembered after refresh.
+
+**Edit subdeck** lets you rename it or change its membership. Search Spanish, English, or category; filter by category; switch between all vocabulary and assigned cards. Check/uncheck individual cards or use **Add filtered cards / Remove filtered cards** for every matching result, including results on other pages. Lists show 25 cards per page. Learned cards remain available in the editor. **Save subdeck** applies changes; **Cancel** discards the draft. **Delete subdeck** confirms before removing that subdeck and its ratings, while leaving vocabulary, other decks, and quiz history intact.
+
+Each subdeck has independent flashcard progress. **Got it** hides a card from practice while keeping it assigned; **Still learning** advances but keeps it in practice. **Reset subdeck** clears all of that subdeck's ratings and brings back every available assigned card. It never resets the main deck, other subdecks, or quizzes. Removing a card from a subdeck clears its rating there; adding it back starts unrated. A new subdeck starts unrated even if its words are learned in the main deck.
+
+Saved subdecks practice their full membership; main-deck category choices remain separate. Counts show assigned, learned, remaining, and unavailable cards. Globally deleted or missing vocabulary stays assigned but is unavailable for practice. Its reference appears in the editor and it returns if the same vocabulary ID is restored; it can also be explicitly unassigned. Vocabulary edits apply everywhere because subdecks reference the original cards.
+
+In **Quiz**, questions come from the selected deck's available cards, including learned cards; answer choices still come from the whole collection. Quiz answers never change flashcard ratings. Switching decks during an active quiz requires confirmation and saves answered questions as an incomplete attempt. New quiz records retain their deck's ID and name at the time of creation, even if the subdeck is later renamed or deleted. The vocabulary management list continues to show main-deck ratings.
+
+Full backups include every subdeck, ordered membership, independent progress, and selected deck. Version 1 saved data/backups migrate automatically to version 2 with existing records preserved and no initial subdecks. Restoring an older backup replaces current state, including removing subdecks absent from that backup. Version 2 backups require this updated app; vocabulary-only JSON/CSV files still contain words only. Save or Cancel an open subdeck editor before navigating to another practice mode.
+
 Use **ES / EN** at the top to switch the interface between Spanish and English. The selected language is saved in this browser and included in full backups. Switching languages keeps your current card, quiz, and progress. **Show English first** controls the practice direction independently. Vocabulary text and personal notes retain their original language.
 
 Category choices start collapsed to leave more space for practice. Click **Categories** to open the panel; its compact summary shows the current selection and word count. Toggle individual categories, use **All cards** or **Clear selection**, then click **Done** (or Categories again) to collapse it. Selections are saved even when the panel is closed and apply to both flashcards and quizzes.
@@ -123,7 +137,7 @@ The app combines bundled data with saved user entries, edits, and deletion marke
 5. Confirm replacement. This replaces saved user changes, deletion markers, ratings, quiz records, and preferences. Current bundled starter data is combined with the restored overrides. Previously active quizzes become incomplete.
 6. Refresh and verify your words and ratings. Keep the backup file until satisfied.
 
-Full backups use a versioned state format (`version: 1`) containing `overrides`, `deleted`, `ratings`, `quizStats`, `attempts`, and `preferences`. Vocabulary-only JSON is not a full backup and must be imported through Import JSON / CSV instead.
+Full backups use a versioned state format (`version: 2`) containing `overrides`, `deleted`, main-deck `ratings`, `subdecks`, `quizStats`, `attempts`, and `preferences`. Each subdeck contains `id`, `name`, ordered `cardIds`, and its own `ratings`; `preferences.deckId` is its selected ID or `null` for the main deck. The existing browser storage key `spanish-flashcards:v1` is retained so existing data can be migrated in place. Vocabulary-only JSON is not a full backup and must be imported through Import JSON / CSV instead.
 
 Browser storage is tied to **browser profile + hostname + port + protocol**. `localhost:5173`, `127.0.0.1:5173`, a different port, another browser, and private browsing do not share data. There is no cloud sync, account, automatic backup, or synchronization with files on disk. Clearing site data removes progress unless you exported it. Never rely on private browsing for durable records.
 

@@ -9,6 +9,32 @@ import { freshState, saveState, saveSubdeck, rateCard, STORAGE_KEY } from './lib
 beforeEach(() => { localStorage.clear(); vi.restoreAllMocks(); vi.spyOn(window, 'confirm').mockReturnValue(true); });
 const stored = () => JSON.parse(localStorage.getItem(STORAGE_KEY));
 
+it.each([false, true])('creates from visible main cards using main ratings and selected categories (all learned: %s)', async allLearned => {
+  let state = freshState();
+  const rooms = base.filter(entry => entry.category === 'Rooms');
+  state.preferences.categories = ['Rooms'];
+  state = rateCard(state, base[0].id, 'got');
+  state = rateCard(state, base[1].id, 'learning');
+  if (allLearned) for (const entry of rooms) state = rateCard(state, entry.id, 'got');
+  state = saveSubdeck(state, { name: 'Other deck', cardIds: [base[0].id, base[1].id] });
+  state = rateCard(state, base[1].id, 'got', state.preferences.deckId);
+  saveState(state);
+  const expected = rooms.filter(entry => state.ratings[entry.id]?.status !== 'got').map(entry => entry.id);
+  const user = userEvent.setup(); render(<App/>);
+  await user.click(screen.getByRole('button', { name: 'Create subdeck' }));
+  await user.type(screen.getByLabelText('Subdeck name'), 'Visible review');
+  await user.click(screen.getByRole('radio', { name: /Main deck’s selected categories/ }));
+  expect(screen.getByRole('checkbox', { name: 'Include card: la cocina' })).toBeChecked();
+  await user.click(screen.getByRole('radio', { name: `Main deck’s visible cards (${expected.length})`, exact: true }));
+  expect(screen.getByRole('checkbox', { name: 'Include card: la cocina' })).not.toBeChecked();
+  await user.click(screen.getByRole('button', { name: 'Save subdeck' }));
+  expect(stored().subdecks[1].cardIds).toEqual(expected);
+  expect(stored().subdecks[1].ratings).toEqual({});
+  expect(stored().ratings).toEqual(state.ratings);
+  if (allLearned) expect(screen.getByText('This subdeck is empty.')).toBeInTheDocument();
+  else expect(screen.getByRole('button', { name: 'Flip card: el baño' })).toBeInTheDocument();
+});
+
 it('creates from main categories, independently rates, resets all members, and persists deck selection', async () => {
   const state = rateCard(freshState(), base[0].id, 'got');
   state.preferences.categories = ['Rooms']; saveState(state);
@@ -57,7 +83,6 @@ it('keeps learned membership editable, cancels drafts, and starts removed/re-add
   expect(stored().subdecks[0].ratings).toEqual({});
   await user.click(screen.getByRole('button', { name: 'Edit subdeck' }));
   await user.selectOptions(screen.getByLabelText('Show cards'), 'all');
-  await user.click(screen.getByText('Unavailable assigned cards (1)'));
   await user.type(screen.getByLabelText('Find cards'), 'la cocina');
   await user.click(screen.getByRole('checkbox', { name: 'Include card: la cocina' }));
   await user.click(screen.getByRole('button', { name: 'Save subdeck' }));
@@ -92,6 +117,7 @@ it('edits all filtered results across pages and can unassign unavailable members
   const save = vi.fn(), user = userEvent.setup();
   render(<SubdeckEditor deck={{ id: 'deck', name: 'Thirty', cardIds: ['missing'], ratings: {} }} entries={entries} knownEntries={entries} seedIds={[]} language="en" onSave={save} onCancel={vi.fn()}/>);
   expect(screen.getByText('Assigned: 1 · Unavailable: 1')).toBeInTheDocument();
+  await user.click(screen.getByText('Unavailable assigned cards (1)'));
   await user.selectOptions(screen.getByLabelText('Show cards'), 'all');
   expect(screen.getAllByRole('checkbox')).toHaveLength(26); // 25 visible plus the unavailable member.
   await user.click(screen.getByRole('button', { name: 'Add filtered cards' }));
