@@ -26,3 +26,5 @@ Initial spontaneous writing sample recorded in S001 (S001-R001). No level or mas
 - On 2026-11-10, newly supplied Descripciones and Huevo award images inspected, corroborating Huevo attainment (EXT-20261110-003). Polluelo checklist now available and inspected; requirements summarized in progress.md. Supporting PDFs inventoried; next preparation target not yet selected.
 
 - On 2026-11-10, learner selects Tres mil next and limits new number vocabulary to Numbers in Spanish slides 60–66, with separate rule cards. Avoid populating the deck with all numbers 0–3,000.
+
+- On 2026-11-11, learner reports Tres mil earned. Instructor Ren reportedly praised performance, with only a note on u pronunciation in último. Award image subsequently visible and directly inspected, corroborating completion (EXT-20261111-002; earlier report EXT-20261111-001). Current rank remains Huevo, progressing toward Polluelo; next challenge not selected.

@@ -1,9 +1,11 @@
 # Current progress
 
-Updated: 2026-11-10 (America/New_York).
+Updated: 2026-11-11 (America/New_York).
 
 ## Current priority
-Next selected challenge: **Tres mil**, to work toward Polluelo (learner selection 2026-11-10; PLAN-20261110-001). Added only 21 vocabulary cards from Numbers in Spanish slides 60–66: 18 number/example cards and three separate rule cards. These slides were text-reviewed; the remainder of the PDF has not been reviewed. Also added 12 missing quantity/ordinal terms from the learner’s follow-up request; reused existing some/a lot/too much/enough entries (PLAN-20261110-002). No challenge assessment or completion change; next step is an unassisted number-use sample before targeted practice.
+**Tres mil EARNED**, reported 2026-11-11 and corroborated by directly inspected award image (EXT-20261111-001/002). Instructor Ren reportedly said it was done really well, with no notes except watching the pronunciation of u in último. No audio supplied; actual vowel production and cause not diagnosed. Badge inspected: Badges/3._Polluelo_Numbers_badge.png, showing TRES MIL, BLACKLINGUAL and 2026. Exact award date unspecified. Community rank remains Huevo, working toward Polluelo; next challenge not yet selected. No exercise pending.
+
+Tres mil preparation history: 21 cards from Numbers in Spanish slides 60–66 (18 number/examples and three rules), plus 12 missing quantity/ordinal terms; four existing terms reused (PLAN-20261110-001/002). These source slides were text-reviewed; no complete PDF review claimed. Preserve vocabulary and app practice separately from awarded achievement.
 
 Huevo attained, learner-reported 2026-11-10 (EXT-20261110-001): final badge completed by describing two pictures, consistent with Descripciones. Group leader reportedly praised overall performance and vocabulary, with gender-agreement slips and unnecessary de in a color description. Pronunciation trouble reported with parece and one unrecalled word; pepinillos supplied for pickles. Color phrase clarified in EXT-20261110-002: recalled “Un teclado de negro”; intended form un teclado negro (or un teclado de color negro). Un/negro agree with teclado; this particular example concerns extra de, not an agreement error. Other agreement examples and pronunciation details remain unknown; no audio. Descripciones and Huevo badge images now inspected (EXT-20261110-003). Community achievement is separate from directly observed performance here. No exercise pending.
 
@@ -32,7 +34,7 @@ Learner reflection after S002 (S002-R021): wants to slow down rather than use fi
 5. Use concrete scenes for estaban/estuvieron when that becomes selected objective; earlier explanation did not establish clarity.
 
 ## Outstanding questions
-- Huevo debrief recorded 2026-11-10: overall performance and word usage praised by the leader, with agreement slips and unnecessary de reported. Color phrase is now recorded as “Un teclado de negro” (EXT-20261110-002); other agreement examples, the pronunciation issue with parece, and second pronunciation word remain unknown. Next objective: Tres mil; meeting date unknown; Polluelo checklist inspected and supporting PDFs inventoried (EXT-20261110-003); Tres mil selected (PLAN-20261110-001).
+- Huevo debrief recorded 2026-11-10: overall performance and word usage praised by the leader, with agreement slips and unnecessary de reported. Color phrase is now recorded as “Un teclado de negro” (EXT-20261110-002); other agreement examples, the pronunciation issue with parece, and second pronunciation word remain unknown. Tres mil earned (EXT-20261111-001); next objective/meeting date unknown; Polluelo checklist inspected and supporting PDFs inventoried (EXT-20261110-003); Último u pronunciation is a reported review target, not an audio-based diagnosis.
 - Any outside assistance used during samples? Absence of report is not verified absence.
 - Real or invented layout: first sample three bedrooms, integrated tour two; clarify only if relevant, not a grammatical error.
 - Wider article/adjective difficulty: word-specific knowledge versus retrieval versus heuristic effects needs more evidence. -a heuristic supported specifically for clima.
@@ -67,14 +69,14 @@ Available preparation sources (Housing PDF text reviewed for S002; other documen
 
 Bonus tracking: Bonus Challenge Badges/Bonus_Use_Spanish_in_a_taxi_or_uber_badge.png is an earned-artifact candidate consistent with the learner's explanation and the overlaid taxi badge in checklist 1. Two bonus checklist images list possible side quests; their other listings do not establish completion. Bonus awards remain separate from rank requirements. Exact award date unknown.
 
-Mi Casa, Descripciones and reaching Huevo are supported by learner reports and award artifacts. Next focus is Tres mil. Polluelo follows Huevo; its newly supplied requirements are recorded below. Read relevant source materials before any selected rehearsal. Continue Mi Casa in occasional unfamiliar contexts for retention; distinguish written rehearsal, community award and directly observed performance.
+Mi Casa, Descripciones and reaching Huevo are supported by learner reports and award artifacts. Tres mil is earned per learner report; next focus is unselected. Polluelo follows Huevo; its newly supplied requirements are recorded below. Read relevant source materials before any selected rehearsal. Continue Mi Casa in occasional unfamiliar contexts for retention; distinguish written rehearsal, community award and directly observed performance.
 
 ### Polluelo — requirements to reach this rank
-Source: directly inspected Polluelo/Polluelo_Checklist.png on 2026-11-10 (EXT-20261110-003). No Polluelo completion claimed or assessed.
+Source: directly inspected Polluelo/Polluelo_Checklist.png on 2026-11-10 (EXT-20261110-003). Tres mil earned, supported by learner report and inspected award image 2026-11-11; no full Polluelo completion claimed or assessed.
 
 | Challenge | Requirements |
 |---|---|
-| Tres mil | All numbers 0–3,000; approximately, close to, half, a pair, more/less than, almost, exactly, some, a lot, too much, enough; first, second, third, last. |
+| Tres mil — EARNED; learner report and inspected 3._Polluelo_Numbers_badge.png (EXT-20261111-001/002) | All numbers 0–3,000; approximately, close to, half, a pair, more/less than, almost, exactly, some, a lot, too much, enough; first, second, third, last. |
 | ¿Dónde está? | Describe locations: here, above, under, beside, behind, inside/outside, next to, far from, close to, between, etc.; this, these, those, that. |
 | Qué calor | Weather conditions, temperatures and extreme conditions (checklist examples include tornado, hurricane and earthquake). |
 | Gira a la derecha | Directions skit: left/right/straight; turn, stop, walk, continue, go up/down, get out of car/off bus; stop sign, traffic light, block, corner, building. |

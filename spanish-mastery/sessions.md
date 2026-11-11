@@ -328,3 +328,9 @@ Learner selected Tres mil next. Added 18 number/example cards and three separate
 
 ### Tres mil vocabulary follow-up — 2026-11-10
 Added 12 missing quantity/ordinal terms requested by learner; reused four existing entries covering some, a lot, too much and enough. Ordinal segundo/a is separate from the time unit el segundo. Evidence: PLAN-20261110-002. No practice or achievement status change.
+
+### Tres mil earned — report 2026-11-11
+Learner reports Tres mil badge earned and added to Badges. Ren reportedly said the challenge was done really well, with no notes except watching u pronunciation in último. Evidence: EXT-20261111-001. No matching image yet visible after rescan; no audio supplied or pronunciation diagnosis made. Recorded externally awarded achievement; no retention/automaticity or Polluelo rank promotion. Next focus unselected. Mi Casa reviews remain 2026-11-16 and 2026-12-09; neither due today. No exercise assigned.
+
+### Tres mil badge artifact confirmed — 2026-11-11
+Following learner notification, rescanned and directly inspected Badges/3._Polluelo_Numbers_badge.png: TRES MIL, banknote graphic, BLACKLINGUAL, 2026. Completion now supported by learner report and supplied award artifact (EXT-20261111-002). Earlier unavailable-image note remains historical. Ren feedback and último pronunciation note unchanged; no new practice, assessment or rank promotion.
