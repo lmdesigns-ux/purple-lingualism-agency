@@ -1,6 +1,6 @@
 # Mi vocabulario
 
-A personal Spanish vocabulary app built with React, Vite, and plain CSS. The 585-entry collection covers vocabulary from all eight Nido and Huevo slide decks, including individual words extracted from their Spanish examples, plus the two learner-requested bookshelf/shelf cards, crear/criar, and 21 selected number/example and rule cards from Numbers in Spanish slides 60–66, plus 12 requested quantity and ordinal terms for Tres mil. It runs locally and does not connect to tutoring records or external programs.
+A personal Spanish vocabulary app built with React, Vite, and plain CSS. The 627-entry collection covers vocabulary from all eight Nido and Huevo slide decks, including individual words extracted from their Spanish examples, plus the two learner-requested bookshelf/shelf cards, crear/criar, and 21 selected number/example and rule cards from Numbers in Spanish slides 60–66, plus 12 requested quantity and ordinal terms for Tres mil. It runs locally and does not connect to tutoring records or external programs.
 
 ## Nido and Huevo vocabulary
 
@@ -159,3 +159,13 @@ The browser tests start a development server automatically if needed and cover k
 No backend, API keys, audio service, or hosted deployment is required.
 
 Flashcards support **Show images** alongside pronunciation and card order. This replaces the English side with the optional `image` URL; words without an image (or with a failed image) use English. Image mode relabels card order to **Show image first** and does not change quizzes. Housing pictures are extracted from the supplied slides. Add an Image URL when editing vocabulary, or include `image` in JSON/CSV imports; use an HTTP(S) URL or a path beginning with `/`. Images and the display preference survive vocabulary exports and full backups respectively.
+
+## ¡Qué calor! phrases
+
+Added nine learner-requested weather phrase cards on 2026-11-12 in **Weather phrases / Frases del tiempo**, including the grouped alternatives as requested. These explicitly requested sentences are an exception to the source-deck vocabulary-only scope. Existing **llover** is an infinitive card; the requested **Llueve / Está lloviendo** practices different forms. Refresh the app and select this category or All cards. Existing IDs, edits and ratings are preserved.
+
+## Weather in Spanish vocabulary
+
+Reviewed all 55 PDF pages on 2026-11-12. Added 33 missing vocabulary cards in **Weather / El tiempo**, with approximate pronunciation and one-based source-page references. Includes climate/weather, forecasts, conditions, temperatures and severe-event alert terms. Existing llover and húmedo/a cards are reused with weather notes. Repeated build slides are deduplicated; Spanish vocabulary from examples is included, with nevando normalized to nevar. Existing hacer, estar, haber, ser, bueno/a and question/time/connecting words remain available in their original categories. The nine explicitly requested Weather phrases cards are preserved. Full example sentences, assistant commands, English explanatory prose, incidental assistant brand names, and off-deck linked book/video content are excluded. The source’s tormenta de nieve is translated as snowstorm / blizzard to preserve its broader meaning.
+
+Refresh and select **Weather** and **Weather phrases** together to study the vocabulary and earlier phrases. Existing personal edits and ratings are preserved.

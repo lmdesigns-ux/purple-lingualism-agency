@@ -334,3 +334,9 @@ Learner reports Tres mil badge earned and added to Badges. Ren reportedly said t
 
 ### Tres mil badge artifact confirmed — 2026-11-11
 Following learner notification, rescanned and directly inspected Badges/3._Polluelo_Numbers_badge.png: TRES MIL, banknote graphic, BLACKLINGUAL, 2026. Completion now supported by learner report and supplied award artifact (EXT-20261111-002). Earlier unavailable-image note remains historical. Ren feedback and último pronunciation note unchanged; no new practice, assessment or rank promotion.
+
+
+## 2026-11-12 — ¡Qué calor! plan saved
+Learner selects Qué calor next and requests adding the proposed five-day practice plan to the dashboard. Saved plan, starter phrases, forecast frame and reporting method in progress.md and PLAN-20261112-001; refreshed dashboard snapshot. No exercises completed or assessed. Official weather PDFs remain unreviewed. Mi Casa reviews unchanged: 2026-11-16 and 2026-12-09.
+
+Weather vocabulary follow-up, 2026-11-12: learner requested source-deck vocabulary. Text-reviewed all 55 Weather in Spanish PDF pages; added 33 missing cards and reused two existing cards with source notes (PLAN-20261112-002). No exercise completed.

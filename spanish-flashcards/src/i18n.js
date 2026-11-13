@@ -184,6 +184,8 @@ export const spanish = {
   "Shapes": "Formas",
   "Texture & material": "Textura y material",
   "Quality & condition": "Calidad y condición",
+  "Weather": "El tiempo",
+  "Weather phrases": "Frases del tiempo",
   "Quantity": "Cantidad",
   "Sensory descriptions": "Descripciones sensoriales",
   "Appearance & body": "Apariencia y cuerpo",

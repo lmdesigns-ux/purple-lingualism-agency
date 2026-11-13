@@ -88,3 +88,13 @@ For example:
 - “Help me choose a bonus side quest and prepare for it.”
 
 The tutor reads the relevant requirements and teaching material, offers manageable practice here in chat, and records your results. Badge achievement is tracked separately from practice accuracy, long-term retention, and spontaneous speaking. Official badges are awarded by your community; rehearsing here does not award them. An absent badge file means completion is not recorded here, rather than a failed challenge.
+
+## Your visual dashboard
+
+Open [dashboard/index.html](dashboard/index.html) in your browser (double-click it in Finder). It works directly from the local file, without a server, installation, account or internet connection. Keep it inside this project so the relative badge-image and source links continue to work.
+
+The dashboard shows one suggested next step, reviews, your goals, up to three focus areas, community milestones and recent wins. Expand the focus cards and program levels for examples, requirements and source links. Source links open the underlying local records; evidence IDs identify the relevant lines in evidence.jsonl. Awards, practice observations and instructor feedback are labeled separately. “Not yet recorded” does not mean a failed challenge.
+
+This is a read-only snapshot. During our chats, the tutor updates `dashboard/data.js` after saving changes to the authoritative learning records. Reload the dashboard to see those changes. “Updated through…” shows the snapshot date, and each recommendation has its own date. There is no background watcher or automatic practice tracking. Reviews are labeled using the current date in America/New_York; unfinished reviews remain due until the records are updated. Dates are suggestions, not deadlines, and no reminders are sent.
+
+Dashboard content lives in `dashboard/data.js`; layout and rendering live separately in HTML, CSS and JavaScript. No information is written to browser storage. To verify the dashboard’s date behavior and source integrity, run `node --test spanish-mastery/dashboard/dashboard.test.cjs` from the project root.

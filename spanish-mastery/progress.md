@@ -1,9 +1,11 @@
 # Current progress
 
-Updated: 2026-11-11 (America/New_York).
+Updated: 2026-11-12 (America/New_York).
 
 ## Current priority
-**Tres mil EARNED**, reported 2026-11-11 and corroborated by directly inspected award image (EXT-20261111-001/002). Instructor Ren reportedly said it was done really well, with no notes except watching the pronunciation of u in último. No audio supplied; actual vowel production and cause not diagnosed. Badge inspected: Badges/3._Polluelo_Numbers_badge.png, showing TRES MIL, BLACKLINGUAL and 2026. Exact award date unspecified. Community rank remains Huevo, working toward Polluelo; next challenge not yet selected. No exercise pending.
+**¡Qué calor! selected next**, 2026-11-12 (PLAN-20261112-001). Five-day plan saved below and displayed on the dashboard. No practice completion or weather badge recorded.
+
+**Tres mil EARNED**, reported 2026-11-11 and corroborated by directly inspected award image (EXT-20261111-001/002). Instructor Ren reportedly said it was done really well, with no notes except watching the pronunciation of u in último. No audio supplied; actual vowel production and cause not diagnosed. Badge inspected: Badges/3._Polluelo_Numbers_badge.png, showing TRES MIL, BLACKLINGUAL and 2026. Exact award date unspecified. Community rank remains Huevo, working toward Polluelo; next challenge selected: ¡Qué calor! (2026-11-12). No exercise pending.
 
 Tres mil preparation history: 21 cards from Numbers in Spanish slides 60–66 (18 number/examples and three rules), plus 12 missing quantity/ordinal terms; four existing terms reused (PLAN-20261110-001/002). These source slides were text-reviewed; no complete PDF review claimed. Preserve vocabulary and app practice separately from awarded achievement.
 
@@ -34,7 +36,7 @@ Learner reflection after S002 (S002-R021): wants to slow down rather than use fi
 5. Use concrete scenes for estaban/estuvieron when that becomes selected objective; earlier explanation did not establish clarity.
 
 ## Outstanding questions
-- Huevo debrief recorded 2026-11-10: overall performance and word usage praised by the leader, with agreement slips and unnecessary de reported. Color phrase is now recorded as “Un teclado de negro” (EXT-20261110-002); other agreement examples, the pronunciation issue with parece, and second pronunciation word remain unknown. Tres mil earned (EXT-20261111-001); next objective/meeting date unknown; Polluelo checklist inspected and supporting PDFs inventoried (EXT-20261110-003); Último u pronunciation is a reported review target, not an audio-based diagnosis.
+- Huevo debrief recorded 2026-11-10: overall performance and word usage praised by the leader, with agreement slips and unnecessary de reported. Color phrase is now recorded as “Un teclado de negro” (EXT-20261110-002); other agreement examples, the pronunciation issue with parece, and second pronunciation word remain unknown. Tres mil earned (EXT-20261111-001); next objective: ¡Qué calor!; meeting date unknown; Polluelo checklist inspected and supporting PDFs inventoried (EXT-20261110-003); Último u pronunciation is a reported review target, not an audio-based diagnosis.
 - Any outside assistance used during samples? Absence of report is not verified absence.
 - Real or invented layout: first sample three bedrooms, integrated tour two; clarify only if relevant, not a grammatical error.
 - Wider article/adjective difficulty: word-specific knowledge versus retrieval versus heuristic effects needs more evidence. -a heuristic supported specifically for clima.
@@ -69,7 +71,7 @@ Available preparation sources (Housing PDF text reviewed for S002; other documen
 
 Bonus tracking: Bonus Challenge Badges/Bonus_Use_Spanish_in_a_taxi_or_uber_badge.png is an earned-artifact candidate consistent with the learner's explanation and the overlaid taxi badge in checklist 1. Two bonus checklist images list possible side quests; their other listings do not establish completion. Bonus awards remain separate from rank requirements. Exact award date unknown.
 
-Mi Casa, Descripciones and reaching Huevo are supported by learner reports and award artifacts. Tres mil is earned per learner report; next focus is unselected. Polluelo follows Huevo; its newly supplied requirements are recorded below. Read relevant source materials before any selected rehearsal. Continue Mi Casa in occasional unfamiliar contexts for retention; distinguish written rehearsal, community award and directly observed performance.
+Mi Casa, Descripciones and reaching Huevo are supported by learner reports and award artifacts. Tres mil is earned per learner report; next focus is ¡Qué calor! (selected 2026-11-12). Polluelo follows Huevo; its newly supplied requirements are recorded below. Read relevant source materials before any selected rehearsal. Continue Mi Casa in occasional unfamiliar contexts for retention; distinguish written rehearsal, community award and directly observed performance.
 
 ### Polluelo — requirements to reach this rank
 Source: directly inspected Polluelo/Polluelo_Checklist.png on 2026-11-10 (EXT-20261110-003). Tres mil earned, supported by learner report and inspected award image 2026-11-11; no full Polluelo completion claimed or assessed.
@@ -90,3 +92,35 @@ Four image files present (one screenshot and three WhatsApp images dated in file
 
 ### Future updates
 On return or when new uploads are mentioned, check relevant folder changes, inspect new evidence, and append records. Ask for challenge outcome/feedback after meetings; record self-report, award artifact, partner/teacher report, and directly observed performance distinctly. No badge awarding or community posting by this system.
+
+## ¡Qué calor! practice plan — saved 2026-11-12
+
+15–20 minutes per day; relative days, start date not assigned.
+
+1. **Make flashcards:** Start with 12–15 weather words and phrases. Put a Spanish phrase on one side and its meaning or a picture on the other.
+2. **Read a weather report:** Review your cards, then read a short forecast in Spanish. Highlight familiar vocabulary and add up to five useful phrases.
+3. **Describe the weather:** Use the report to write five sentences about today’s weather and tomorrow’s forecast. Read them aloud.
+4. **Watch a forecast:** Choose a short Spanish forecast. Watch once for the general meaning, again with Spanish captions if available, and a third time to repeat useful phrases.
+5. **Give your own forecast:** Record a 30–60-second weather report. Include today, tomorrow, a temperature, and a suggestion about clothing or activities.
+
+Starter phrase cards:
+- ¡Qué calor! — It’s so hot!
+- Hace calor / frío. — It’s hot / cold.
+- Hace sol / viento. — It’s sunny / windy.
+- Está nublado. — It’s cloudy.
+- Llueve / Está lloviendo. — It rains / It’s raining.
+- Hay tormentas. — There are thunderstorms.
+- La temperatura máxima / mínima — The high / low temperature
+- Hay una probabilidad de lluvia del veinte por ciento. — There’s a twenty percent chance of rain.
+- Mañana va a hacer calor. — Tomorrow it’s going to be hot.
+
+Forecast frame: Hoy hace ____. La temperatura es de ____ grados. Mañana va a ____. Para este tiempo, recomiendo ____.
+
+Goal: Understand the main idea of a short forecast and give a simple forecast of your own without reading every word.
+
+Report back: After practice, share your five sentences or forecast recording, the phrases you used, and anything that was difficult.
+
+Plan only; official weather PDFs remain unreviewed and should be consulted before full challenge rehearsal. Checklist also includes extreme conditions. No new retention or automaticity evidence. Existing Mi Casa reviews remain November 16 and December 9.
+
+## Weather vocabulary prepared — 2026-11-12
+All 55 pages of Weather in Spanish.pdf text-reviewed (PLAN-20261112-002). Added 33 vocabulary cards in Weather / El tiempo; reused existing llover and húmedo/a with weather notes. Nine earlier Weather phrases cards preserved. This supersedes earlier notes that this specific PDF was unreviewed; the separate reading and translation PDFs remain unreviewed. Setup only; no completed practice, badge or mastery inferred.
