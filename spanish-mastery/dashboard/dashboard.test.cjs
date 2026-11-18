@@ -25,11 +25,12 @@ test('review groups choose the next upcoming date while retaining due and undate
  const on=reviewGroups(r,'2026-11-16');assert.equal(on.due.length,1);assert.equal(on.upcoming[0].date,'2026-12-09');
  const after=reviewGroups(r,'2026-12-10');assert.equal(after.due.length,2);assert.equal(after.upcoming.length,0);assert.equal(JSON.stringify(r),before);
 });
-test('snapshot has five Polluelo core challenges, two retos, and only Tres mil earned',()=>{
+test('snapshot has five Polluelo core challenges, two retos, with Tres mil and Spanish on your phone earned',()=>{
  const data=snapshot();const polluelo=data.program.levels.find(x=>x.id==='polluelo');
  assert.equal(data.program.currentRank,'Huevo');assert.equal(polluelo.status,'In progress');assert.equal(polluelo.core.length,5);assert.equal(polluelo.retos.length,2);
- assert.deepEqual(Array.from(polluelo.core.filter(x=>x.status==='earned'),x=>x.title),['Tres mil']);assert.ok(polluelo.retos.every(x=>x.status==='unrecorded'));
- assert.equal(data.focusAreas.length,3);assert.equal(data.goals.length,3);assert.equal(data.achievements.length,3);
+ assert.deepEqual(Array.from(polluelo.core.filter(x=>x.status==='earned'),x=>x.title),['Tres mil']);assert.deepEqual(Array.from(polluelo.retos.filter(x=>x.status==='earned'),x=>x.title),['Spanish on your phone']);
+ assert.equal(polluelo.retos.find(x=>x.title==='Discover a region’s culture').status,'unrecorded');
+ assert.equal(data.focusAreas.length,3);assert.equal(data.goals.length,3);assert.equal(data.achievements.length,4);
  for(const id of ['pajarito','cuervo']){const level=data.program.levels.find(x=>x.id===id);assert.equal(level.status,'Not available');assert.equal(level.core,undefined);}
 });
 test('snapshot source references and badge files exist; evidence IDs are real',()=>{

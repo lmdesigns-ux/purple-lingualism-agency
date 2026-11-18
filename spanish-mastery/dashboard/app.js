@@ -12,7 +12,13 @@
   function sourceList(ids=[]) {
     const box=$('div','sources');
     box.append($('span','source-label','From your records'));
-    for(const id of ids) {const source=data.sources[id];if(source)box.append(link(source.label,source.href));}
+    for(const id of ids) {
+      const source=data.sources[id];
+      if(!source) continue;
+      const anchor=link(source.label,source.href);
+      anchor.dataset.recordId=id;
+      box.append(anchor);
+    }
     return box;
   }
   function disclosure(title,children,className='more-details') {

@@ -9,3 +9,56 @@
 .practice-plan{margin-top:28px;padding:28px;background:white;border:1px solid var(--line);border-radius:16px;scroll-margin-top:20px}.practice-plan h2{margin:8px 0 12px;font-size:26px}.practice-plan h3{font-size:16px;margin-bottom:6px}.practice-plan p,.practice-plan li{font-size:14px;line-height:1.7}.plan-days{padding-left:24px}.plan-days li{padding:10px 0 10px 6px}.forecast-script{padding:16px;background:var(--light-purple);border-radius:8px;margin:12px 0}.practice-plan>p{margin-bottom:12px}
 
 .study-materials{display:flex;flex-direction:column;gap:7px;margin:13px 0;font-size:12px;line-height:1.65}.study-materials a{overflow-wrap:anywhere}
+
+#record-reader {
+  width: min(760px, calc(100% - 24px));
+  max-height: calc(100% - 24px);
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  color: var(--ink);
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 18px 60px #30243c30;
+}
+#record-reader[open] { display: flex; flex-direction: column; }
+#record-reader::backdrop { background: #30243c80; }
+.record-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px clamp(16px, 4vw, 28px);
+  background: var(--light-purple);
+  border-bottom: 1px solid var(--line);
+}
+.record-header h2 { font-size: clamp(18px, 4vw, 24px); overflow-wrap: anywhere; }
+#record-reader button {
+  padding: 5px 10px;
+  background: white;
+  color: var(--purple);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.record-content {
+  overflow: auto;
+  padding: 20px clamp(16px, 4vw, 28px);
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+.record-content > * + * { margin-top: 14px; }
+.record-content :is(h3, h4, h5, h6) { margin: 24px 0 10px; }
+.record-content > :first-child { margin-top: 0; }
+.record-content dl { margin-bottom: 16px; }
+.record-content dt { font-weight: 650; color: var(--purple); }
+.record-content dd { margin: 3px 0 16px; white-space: pre-wrap; }
+.record-content ul, .record-content ol { padding-left: 24px; }
+.record-content li + li { margin-top: 4px; }
+.record-content dd ul { margin: 0; }
+.record-content blockquote { margin-inline: 0; padding-left: 14px; border-left: 3px solid var(--line); }
+.record-content img { display: block; max-width: 100%; height: auto; margin-inline: auto; }
+.record-table { overflow-x: auto; }
+.record-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.record-table :is(th, td) { padding: 8px 10px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+.record-table th { background: var(--light-purple); }

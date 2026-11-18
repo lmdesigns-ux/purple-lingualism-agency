@@ -1,6 +1,6 @@
 // Curated from the learning records. Update during chat; do not infer achievement from app usage.
 window.SPANISH_MASTERY_DATA = {
-  "updatedThrough": "2026-11-12",
+  "updatedThrough": "2026-11-18",
   "timezone": "America/New_York",
   "practiceLinks": [
     {
@@ -294,7 +294,7 @@ window.SPANISH_MASTERY_DATA = {
         "id": "polluelo",
         "title": "Polluelo",
         "status": "In progress",
-        "description": "Requirements to reach Polluelo. Tres mil is earned; ¡Qué calor! is your selected next challenge.",
+        "description": "Requirements to reach Polluelo. You earned Tres mil and Spanish on your phone. ¡Qué calor! is your selected next challenge.",
         "core": [
           {
             "title": "Tres mil",
@@ -375,10 +375,11 @@ window.SPANISH_MASTERY_DATA = {
           {
             "title": "Spanish on your phone",
             "description": "Set your phone, or at least three everyday apps, to Spanish. Post photo proof in #celebrations.",
-            "status": "unrecorded",
+            "status": "earned",
             "sources": [
-              "progress"
-            ]
+              "EXT-20261118-001"
+            ],
+            "badge": "../../Spanish Programs/The Spanish Challenge Community x Blacklingual/Badges/3._Polluelo_Set_phone_to_Spanish_challenge_badge.png"
           },
           {
             "title": "Discover a region’s culture",
@@ -391,7 +392,8 @@ window.SPANISH_MASTERY_DATA = {
         ],
         "sources": [
           "polluelo-checklist",
-          "EXT-20261111-002"
+          "EXT-20261111-002",
+          "EXT-20261118-001"
         ]
       },
       {
@@ -426,6 +428,15 @@ window.SPANISH_MASTERY_DATA = {
     }
   ],
   "achievements": [
+    {
+      "title": "Spanish on your phone earned",
+      "description": "You earned the Teléspañol badge for this Polluelo reto.",
+      "reportDate": "2026-11-18",
+      "badge": "../../Spanish Programs/The Spanish Challenge Community x Blacklingual/Badges/3._Polluelo_Set_phone_to_Spanish_challenge_badge.png",
+      "sources": [
+        "EXT-20261118-001"
+      ]
+    },
     {
       "title": "Tres mil earned",
       "description": "Ren reportedly praised your performance, with only a note about u in último.",
@@ -520,6 +531,10 @@ window.SPANISH_MASTERY_DATA = {
     },
     "PLAN-20261112-002": {
       "label": "Weather vocabulary preparation · PLAN-20261112-002",
+      "href": "../evidence.jsonl"
+    },
+    "EXT-20261118-001": {
+      "label": "Teléspañol award · EXT-20261118-001",
       "href": "../evidence.jsonl"
     }
   },

@@ -4,10 +4,10 @@ import { freshState, validateState, validateVocabulary, effectiveVocabulary, ups
 import { spanish, translator } from './i18n';
 
 describe('vocabulary and persistence', () => {
-  it('contains 627 valid vocabulary entries with unambiguous prompts and translated categories', () => {
-    expect(validateVocabulary(base)).toHaveLength(627);
+  it('contains 672 valid vocabulary entries with unambiguous prompts and translated categories', () => {
+    expect(validateVocabulary(base)).toHaveLength(672);
     const categories = new Set(base.map(e=>e.category));
-    expect(categories.size).toBe(34);
+    expect(categories.size).toBe(37);
     for (const category of categories) {
       expect(spanish[category]).toBeTruthy();
       expect(translator('es')(category)).toBe(spanish[category]);

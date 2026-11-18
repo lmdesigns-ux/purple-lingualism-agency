@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Spanish Mastery · Your learning journey</title><link rel="stylesheet" href="styles.css"><script src="data.js" defer></script><script src="logic.js" defer></script><script src="app.js" defer></script></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Spanish Mastery · Your learning journey</title><link rel="stylesheet" href="styles.css"><script src="data.js" defer></script><script src="logic.js" defer></script><script src="records-data.js" defer></script><script src="records.js" defer></script><script src="app.js" defer></script></head>
 <body>
 <a class="skip-link" href="#main">Skip to your dashboard</a>
 <header class="site-header"><a class="brand" href="./index.html"><span class="brand-symbol" aria-hidden="true">es.</span><span>Spanish Mastery<small>YOUR LEARNING NOTEBOOK</small></span></a><nav aria-label="Dashboard"><a href="#today">Today</a><a href="#focus">Focus</a><a href="#programs">Your journey</a></nav></header>
@@ -9,5 +9,12 @@
 <div id="dashboard"><p>Loading your learning snapshot…</p></div>
 <noscript><p>This dashboard needs JavaScript enabled to display the local snapshot. Your records are available below.</p></noscript>
 <footer><p>Progress is more than a badge.<br><span>Awards, practice and lasting recall each tell a different part of your story.</span></p><div><a href="../learner-profile.md">Learner profile</a><a href="../progress.md">Progress notes</a><a href="../README.md">How this works</a></div></footer>
+<dialog id="record-reader" aria-labelledby="record-title">
+  <header class="record-header">
+    <h2 id="record-title"></h2>
+    <form method="dialog"><button autofocus>Close</button></form>
+  </header>
+  <div id="record-content" class="record-content"></div>
+</dialog>
 </main>
 </body></html>

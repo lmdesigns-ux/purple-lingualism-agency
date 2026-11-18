@@ -340,3 +340,6 @@ Following learner notification, rescanned and directly inspected Badges/3._Pollu
 Learner selects Qué calor next and requests adding the proposed five-day practice plan to the dashboard. Saved plan, starter phrases, forecast frame and reporting method in progress.md and PLAN-20261112-001; refreshed dashboard snapshot. No exercises completed or assessed. Official weather PDFs remain unreviewed. Mi Casa reviews unchanged: 2026-11-16 and 2026-12-09.
 
 Weather vocabulary follow-up, 2026-11-12: learner requested source-deck vocabulary. Text-reviewed all 55 Weather in Spanish PDF pages; added 33 missing cards and reused two existing cards with source notes (PLAN-20261112-002). No exercise completed.
+
+## Spanish on your phone earned — reported 2026-11-18
+Learner reported adding the badge. Inspected the TELÉSPAÑOL award image, showing a phone graphic, BLACKLINGUAL, and 2026 (EXT-20261118-001). Exact award date unknown. Recorded as an earned Polluelo reto. Current rank is Huevo, working toward Polluelo. ¡Qué calor! remains the selected core challenge.

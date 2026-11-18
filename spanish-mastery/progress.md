@@ -3,6 +3,8 @@
 Updated: 2026-11-12 (America/New_York).
 
 ## Current priority
+
+**Spanish on your phone EARNED** as a Polluelo reto. Reported 2026-11-18 and supported by the inspected TELÉSPAÑOL badge image (EXT-20261118-001). Exact award date unknown.
 **¡Qué calor! selected next**, 2026-11-12 (PLAN-20261112-001). Five-day plan saved below and displayed on the dashboard. No practice completion or weather badge recorded.
 
 **Tres mil EARNED**, reported 2026-11-11 and corroborated by directly inspected award image (EXT-20261111-001/002). Instructor Ren reportedly said it was done really well, with no notes except watching the pronunciation of u in último. No audio supplied; actual vowel production and cause not diagnosed. Badge inspected: Badges/3._Polluelo_Numbers_badge.png, showing TRES MIL, BLACKLINGUAL and 2026. Exact award date unspecified. Community rank remains Huevo, working toward Polluelo; next challenge selected: ¡Qué calor! (2026-11-12). No exercise pending.
@@ -83,7 +85,8 @@ Source: directly inspected Polluelo/Polluelo_Checklist.png on 2026-11-10 (EXT-20
 | Qué calor | Weather conditions, temperatures and extreme conditions (checklist examples include tornado, hurricane and earthquake). |
 | Gira a la derecha | Directions skit: left/right/straight; turn, stop, walk, continue, go up/down, get out of car/off bus; stop sign, traffic light, block, corner, building. |
 | Fue un buen día / finde | Talk about your day/weekend in the past: what you did, with whom, and how it was. |
-| Retos | Set phone to Spanish, or at least three everyday apps, and post photo proof in #celebrations. Learn something new about a region’s culture and share in #celebrations; suggestions include education, politics, holidays and cultural norms; slang/sayings excluded. |
+| Spanish on your phone — EARNED (EXT-20261118-001) | Set phone to Spanish, or at least three everyday apps, and post photo proof in #celebrations. |
+| Discover a region’s culture — not yet recorded | Learn something new about a region’s culture and share in #celebrations; suggestions include education, politics, holidays and cultural norms; slang/sayings excluded. |
 
 Supporting PDFs inventoried, contents not yet reviewed: Numbers in Spanish.pdf; Weather in Spanish.pdf; Weather Script Reading Practice.pdf; Translation Practice_ Reporte del Clima.pdf; Blacklingual Discord_ Locations & Directions + How to Use GPS.pdf. Read relevant PDFs before selected preparation. Community posting remains a learner activity; no completion inferred from files. Retain Mi Casa reviews on 2026-11-16 and 2026-12-09.
 

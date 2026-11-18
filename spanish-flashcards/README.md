@@ -1,6 +1,6 @@
 # Mi vocabulario
 
-A personal Spanish vocabulary app built with React, Vite, and plain CSS. The 627-entry collection covers vocabulary from all eight Nido and Huevo slide decks, including individual words extracted from their Spanish examples, plus the two learner-requested bookshelf/shelf cards, crear/criar, and 21 selected number/example and rule cards from Numbers in Spanish slides 60–66, plus 12 requested quantity and ordinal terms for Tres mil. It runs locally and does not connect to tutoring records or external programs.
+A personal Spanish vocabulary app built with React, Vite, and plain CSS. The 672-entry collection covers vocabulary from all eight Nido and Huevo slide decks, including individual words extracted from their Spanish examples, plus the two learner-requested bookshelf/shelf cards, crear/criar, and 21 selected number/example and rule cards from Numbers in Spanish slides 60–66, plus 12 requested quantity and ordinal terms for Tres mil. The Tradiciones category includes 15 learner-requested words and phrases (reusing the existing preparar card). Cuando éramos niños adds 16 cards, grouping synonymous infancia/niñez and consentido/mimado and including a regional usage note for ñoño/a. Raíces y recuerdos adds 15 words and phrases about ancestry, heritage, and memories. It runs locally and does not connect to tutoring records or external programs.
 
 ## Nido and Huevo vocabulary
 
